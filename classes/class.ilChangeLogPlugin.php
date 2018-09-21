@@ -314,7 +314,7 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 
 					if (!empty($entry->getParent())) {
 						$entry = ctrlmmEntry::find($entry->getParent());
-						if ($entry !== NULL) {
+						if ($entry !== NULL && $entry->getTitle() === self::PLUGIN_NAME) {
 							$entry->delete();
 						}
 					}
@@ -327,7 +327,7 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 
 					if (!empty($entry->getParent())) {
 						$entry = ctrlmmEntry::find($entry->getParent());
-						if ($entry !== NULL) {
+						if ($entry !== NULL && $entry->getTitle() === self::PLUGIN_NAME) {
 							$entry->delete();
 						}
 					}
