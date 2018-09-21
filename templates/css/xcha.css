@@ -1,0 +1,27 @@
+.chlog-inline-table {
+    width: 100%;
+}
+
+.chlog-inline-table td {
+    padding: 8px;
+    color: #6d6d6d;
+    vertical-align: top;
+}
+
+.chlog-inline-table td.td-label {
+    color: black;
+    width: 200px;
+}
+
+.chlog-inline-table tr {
+    border-bottom: 1px dotted #d6d6d6;
+    background: #FFFFFF;
+}
+
+.chlog-inline-table tr:last-child {
+    border-bottom: none;
+}
+
+.chlog-inline-table tr:nth-child(even) {
+    background: #F9F9F9;
+}

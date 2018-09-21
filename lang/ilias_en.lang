@@ -1,0 +1,46 @@
+changelog#:#Change Log
+deletion_log#:#Deletion Log
+modification_log#:#Change Log
+crs_participant1#:#Admin
+crs_participant2#:#Member
+crs_participant3#:#Tutor
+del_col_component_id#:#Component
+del_col_deletion_mode#:#Deletion Mode
+del_col_created_at#:#Deleted
+del_col_created_user_id#:#Deleted By
+del_col_obj_id#:#Object-ID
+del_col_ref_id#:#Reference-ID
+del_col_title#:#Title
+del_col_description#:#Description
+del_col_type#:#Type
+del_col_context#:#Context
+del_col_owner#:#Created By
+del_col_obj_created_at#:#Created
+del_col_additional_data#:#Additional Data
+mod_col_component_id#:#Component
+mod_col_old_values#:#Old Values
+mod_col_new_values#:#New Values
+mod_col_created_at#:#Modified
+mod_col_created_user_id#:#Modified By
+mod_col_obj_id#:#Object-ID
+mod_col_ref_id#:#Reference-ID
+mod_col_title#:#Title
+show#:#Show
+deleted_between#:#Deleted in Range
+modified_between#:#Modified in Range
+conf_roles#:#Permitted Roles
+conf_roles_info#:#Enter comma separated ids of roles, which should be granted permission to the changelog.
+newly_created#:#Newly Created
+deletion_mode_delete#:#Deleted
+deletion_mode_trash#:#ILIAS Trash
+activerecordconfig_configuration#:#Configuration
+activerecordconfig_configuration_saved#:#Configuration saved
+activerecordconfig_save#:#Save
+removeplugindataconfirm_cancel#:#Cancel
+removeplugindataconfirm_confirm_remove_data#:#Do you want to remove the %1$s data as well? At most, you just want to disable the %1$s plugin?
+removeplugindataconfirm_deactivate#:#Just deactivate %1$s plugin
+removeplugindataconfirm_data#:#%1$s data
+removeplugindataconfirm_keep_data#:#Keep %1$s data
+removeplugindataconfirm_msg_kept_data#:#The %1$s data was kept!
+removeplugindataconfirm_msg_removed_data#:#The %1$s data was also removed!
+removeplugindataconfirm_remove_data#:#Remove %1$s data
