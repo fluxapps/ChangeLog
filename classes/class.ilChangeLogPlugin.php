@@ -13,6 +13,7 @@ use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationEntry;
 use srag\Plugins\CtrlMainMenu\Entry\ctrlmmEntry;
 use srag\Plugins\CtrlMainMenu\EntryTypes\Ctrl\ctrlmmEntryCtrl;
 use srag\Plugins\CtrlMainMenu\EntryTypes\Dropdown\ctrlmmEntryDropdown;
+use srag\Plugins\CtrlMainMenu\Menu\ctrlmmMenu;
 use srag\RemovePluginDataConfirm\PluginUninstallTrait;
 
 /**
@@ -27,6 +28,7 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 	const PLUGIN_NAME = "ChangeLog";
 	const PLUGIN_CLASS_NAME = self::class;
 	const REMOVE_PLUGIN_DATA_CONFIRM_CLASS_NAME = ChangeLogRemoveDataConfirm::class;
+	const ADMIN_ROLE_ID = 2;
 	/**
 	 * @var ChangeLogChangeLog
 	 */
@@ -268,6 +270,8 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 						"en" => self::PLUGIN_NAME,
 						"de" => self::PLUGIN_NAME
 					]);
+					$dropdown->setPermissionType(ctrlmmMenu::PERM_ROLE);
+					$dropdown->setPermission(json_encode([ self::ADMIN_ROLE_ID ]));
 					$dropdown->store();
 
 					$entry_modification = new ctrlmmEntryCtrl();
