@@ -44,7 +44,7 @@ class ChangeLogConfig extends ActiveRecordConfig {
 	/**
 	 * @return bool|null
 	 */
-	public static function getUninstallRemovesData() {
+	public static function getUninstallRemovesData()/*: ?bool*/ {
 		return self::getXValue(ChangeLogRemoveDataConfirm::KEY_UNINSTALL_REMOVES_DATA, ChangeLogRemoveDataConfirm::DEFAULT_UNINSTALL_REMOVES_DATA);
 	}
 
@@ -52,7 +52,8 @@ class ChangeLogConfig extends ActiveRecordConfig {
 	/**
 	 * @param bool $uninstall_removes_data
 	 */
-	public static function setUninstallRemovesData($uninstall_removes_data) {
+	public static function setUninstallRemovesData(/*bool*/
+		$uninstall_removes_data)/*: void*/ {
 		self::setBooleanValue(ChangeLogRemoveDataConfirm::KEY_UNINSTALL_REMOVES_DATA, $uninstall_removes_data);
 	}
 
@@ -60,7 +61,7 @@ class ChangeLogConfig extends ActiveRecordConfig {
 	/**
 	 *
 	 */
-	public static function removeUninstallRemovesData() {
+	public static function removeUninstallRemovesData()/*: void*/ {
 		self::removeName(ChangeLogRemoveDataConfirm::KEY_UNINSTALL_REMOVES_DATA);
 	}
 }

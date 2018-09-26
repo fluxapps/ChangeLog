@@ -20,7 +20,7 @@ class ChangeLogRemoveDataConfirm extends AbstractRemovePluginDataConfirm {
 	/**
 	 * @inheritdoc
 	 */
-	public function getUninstallRemovesData() {
+	public function getUninstallRemovesData()/*: ?bool*/ {
 		return ChangeLogConfig::getUninstallRemovesData();
 	}
 
@@ -28,7 +28,8 @@ class ChangeLogRemoveDataConfirm extends AbstractRemovePluginDataConfirm {
 	/**
 	 * @inheritdoc
 	 */
-	public function setUninstallRemovesData($uninstall_removes_data) {
+	public function setUninstallRemovesData(/*bool*/
+		$uninstall_removes_data)/*: void*/ {
 		ChangeLogConfig::setUninstallRemovesData($uninstall_removes_data);
 	}
 
@@ -36,7 +37,7 @@ class ChangeLogRemoveDataConfirm extends AbstractRemovePluginDataConfirm {
 	/**
 	 * @inheritdoc
 	 */
-	public function removeUninstallRemovesData() {
+	public function removeUninstallRemovesData()/*: void*/ {
 		ChangeLogConfig::removeUninstallRemovesData();
 	}
 }

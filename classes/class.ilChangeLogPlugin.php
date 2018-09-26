@@ -244,7 +244,7 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 	/**
 	 * @inheritdoc
 	 */
-	protected function deleteData() {
+	protected function deleteData()/*: void*/ {
 		self::dic()->database()->dropTable(ChangeLogDeletionEntry::TABLE_NAME, false);
 		self::dic()->database()->dropTable(ChangeLogModification::TABLE_NAME, false);
 		self::dic()->database()->dropTable(ChangeLogModificationEntry::TABLE_NAME, false);
