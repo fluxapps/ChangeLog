@@ -5,6 +5,7 @@ namespace srag\Plugins\ChangeLog\LogEntry;
 
 use ActiveRecord;
 use ilChangeLogPlugin;
+use srag\ActiveRecordConfig\ActiveRecordConfig;
 use srag\DIC\DICTrait;
 
 /**
@@ -100,8 +101,8 @@ abstract class ChangeLogLogEntry extends ActiveRecord {
 
 
 	public function create() {
-		$this->created_at = date('Y-m-d H:i:s');
-		$this->updated_at = date('Y-m-d H:i:s');
+		$this->created_at = date(ActiveRecordConfig::SQL_DATE_FORMAT);
+		$this->updated_at = date(ActiveRecordConfig::SQL_DATE_FORMAT);
 		$this->created_user_id = self::dic()->user()->getId();
 		$this->updated_user_id = self::dic()->user()->getId();
 		parent::create();

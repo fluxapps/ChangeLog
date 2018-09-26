@@ -2,6 +2,7 @@
 
 namespace srag\Plugins\ChangeLog\LogEntry\Deletion;
 
+use srag\ActiveRecordConfig\ActiveRecordConfig;
 use srag\Plugins\ChangeLog\LogEntry\ChangeLogLogEntry;
 
 /**
@@ -119,7 +120,7 @@ class ChangeLogDeletionEntry extends ChangeLogLogEntry {
 
 
 	public function update() {
-		$this->updated_at = date('Y-m-d H:i:s');
+		$this->updated_at = date(ActiveRecordConfig::SQL_DATE_FORMAT);
 		$this->updated_user_id = self::dic()->user()->getId();
 		parent::update();
 	}
