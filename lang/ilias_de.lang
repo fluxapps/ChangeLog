@@ -5,7 +5,7 @@ crs_participant1#:#Admin
 crs_participant2#:#Member
 crs_participant3#:#Tutor
 del_col_component_id#:#Komponente
-del_col_deletion_mode#:#MISSING del_col_deletion_mode
+del_col_deletion_mode#:#Löschmodus
 del_col_created_at#:#Gelöscht
 del_col_created_user_id#:#Gelöscht durch
 del_col_obj_id#:#Objekt-ID
@@ -33,6 +33,13 @@ conf_roles_info#:#Geben Sie durch Komma getrennte IDs von Rollen ein, denen die 
 newly_created#:#Neu erstellt
 deletion_mode_delete#:#Gelöscht
 deletion_mode_trash#:#ILIAS Papierkorb
+user_deleted#:#Benutzer %s wurde gelöscht
+user_deleted_info#:#Benutzer wurde gelöscht. Weitere Informationen sind nicht verfügbar, weil sie bereits in der Datenbank gelöscht wurde, bevor ILIAS-Core das deleteUser-Ereignis ausgelöst hat!
+user#:#Benutzer
+object#:#ILIAS-Objekt
+user_assigment#:#Benutzerzuordnung (Organisationseinheit)
+user_removed_from_course#:#Der Benutzer wurde als Teilnehmer aus dem Kurs entfernt
+course_participant#:#Kursteilnehmer
 activerecordconfig_configuration#:#Konfiguration
 activerecordconfig_configuration_saved#:#Konfiguration gespeichert
 activerecordconfig_save#:#Speichern

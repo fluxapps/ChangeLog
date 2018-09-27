@@ -76,7 +76,7 @@ class ChangeLogComponentUser extends ChangeLogComponent {
 	 * @inheritdoc
 	 */
 	public function getModification(array $parameters) {
-		return parent::getCreation(array( 'object' => $parameters['user_obj'] ));
+		return parent::getModification(array( 'object' => $parameters['user_obj'] ));
 	}
 
 
@@ -104,8 +104,10 @@ class ChangeLogComponentUser extends ChangeLogComponent {
 		$deletion->setContainerRefId($user_ref_id);
 		$deletion->setContainerObjId($user_object->getId());
 		$deletion->setContainerType('usr');
-		$deletion->setTitle('[' . $user_object->getLogin() . '] ' . $user_object->getFirstname() . ' ' . $user_object->getLastname());
-		$deletion->setDescription('User was deleted'); // TODO: Translate
+		//$deletion->setTitle('[' . $user_object->getLogin() . '] ' . $user_object->getFirstname() . ' ' . $user_object->getLastname());
+		$deletion->setTitle(self::plugin()->translate("user_deleted", "", [ $user_object->getId() ]));
+		$deletion->setType($user_object->getType());
+		$deletion->setDescription(self::plugin()->translate("user_deleted_info"));
 
 		return $deletion;
 	}
@@ -127,7 +129,7 @@ class ChangeLogComponentUser extends ChangeLogComponent {
 	 * @return string
 	 */
 	public function getTitle() {
-		return 'User'; // TODO: Translate
+		return self::plugin()->translate("user");
 	}
 
 

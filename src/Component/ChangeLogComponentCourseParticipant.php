@@ -38,7 +38,7 @@ class ChangeLogComponentCourseParticipant extends ChangeLogComponent {
 		$deletion->setContainerObjId($obj_id);
 		$deletion->setContainerType('crs');
 		$deletion->setTitle('[' . $object->getLogin() . '] ' . $object->getFirstname() . ' ' . $object->getLastname());
-		$deletion->setDescription('User was removed as participant from course'); // TODO: Translate
+		$deletion->setDescription(self::plugin()->translate("user_removed_from_course"));
 
 		return $deletion;
 	}
@@ -50,7 +50,7 @@ class ChangeLogComponentCourseParticipant extends ChangeLogComponent {
 	 * @return string
 	 */
 	public function getTitle() {
-		return 'Course Participant'; // TODO: Translate
+		return self::plugin()->translate("course_participant");
 	}
 
 

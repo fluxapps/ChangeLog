@@ -33,6 +33,13 @@ conf_roles_info#:#Enter comma separated ids of roles, which should be granted pe
 newly_created#:#Newly Created
 deletion_mode_delete#:#Deleted
 deletion_mode_trash#:#ILIAS Trash
+user_deleted#:#User %s was deleted
+user_deleted_info#:#User was deleted. More info are not available because it was already deleted in database before ILIAS core has triggered the deleteUser event!
+user#:#User
+object#:#ILIAS object
+user_assigment#:#User Assignment (Organisational Unit)
+user_removed_from_course#:#User was removed as participant from course
+course_participant#:#Course participant
 activerecordconfig_configuration#:#Configuration
 activerecordconfig_configuration_saved#:#Configuration saved
 activerecordconfig_save#:#Save

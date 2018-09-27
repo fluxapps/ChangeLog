@@ -82,7 +82,7 @@ class ChangeLogComponentObject extends ChangeLogComponent {
 	 * @return string
 	 */
 	public function getTitle() {
-		return 'ILIAS Object'; // TODO: Translate
+		return self::plugin()->translate("object");
 	}
 
 

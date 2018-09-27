@@ -6,6 +6,7 @@ use srag\Plugins\ChangeLog\ChangeLog\ChangeLogChangeLog;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponent;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponentCourseParticipant;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponentObject;
+use srag\Plugins\ChangeLog\Component\ChangeLogComponentUser;
 use srag\Plugins\ChangeLog\Config\ChangeLogConfig;
 use srag\Plugins\ChangeLog\LogEntry\Deletion\ChangeLogDeletionEntry;
 use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModification;
@@ -155,7 +156,10 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 						$this->changeLog->handleModification($component, $parameters);
 						break;
 					case 'deleteUser':
-						$this->handleDeletion([ "object" => new ilObjUser($parameters["usr_id"]) ], ChangeLogDeletionEntry::MODE_DELETE);
+						$user = new ilObjUser();
+						$user->setId($parameters["usr_id"]);
+						self::trackObjectByType($user->getType(), new ChangeLogComponentUser());
+						$this->handleDeletion([ "object" => $user ], ChangeLogDeletionEntry::MODE_DELETE);
 						break;
 					default:
 						break;

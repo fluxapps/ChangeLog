@@ -82,7 +82,7 @@ class ChangeLogComponentOrgUnit extends ChangeLogComponent {
 
 
 	public function getTitle() {
-		return 'User Assignment (Organisational Unit)'; // TODO: Translate
+		return self::plugin()->translate("user_assigment");
 	}
 
 
