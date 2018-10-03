@@ -79,6 +79,7 @@ class ChangeLogChangeLog {
 		if (!$modification->getComponentId()) {
 			$modification->setComponentId($component->getId());
 		}
+
 		if ($modification->hasModifications()) {
 			$modification->save();
 		}

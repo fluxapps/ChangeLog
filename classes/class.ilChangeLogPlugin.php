@@ -152,7 +152,7 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 					case 'afterCreate':
 						$this->changeLog->handleCreation($component, $parameters);
 						break;
-					case 'afterUpdate':
+					case 'beforeUpdate': //@todo @fwyss see Services/User/classes/class.ilObjUser.php:554
 						$this->changeLog->handleModification($component, $parameters);
 						break;
 					case 'deleteUser':

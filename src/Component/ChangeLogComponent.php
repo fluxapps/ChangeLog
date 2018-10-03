@@ -135,6 +135,7 @@ abstract class ChangeLogComponent {
 		foreach ($this->attributes as $attribute => $getter_method) {
 			$old_value = $old_object->$getter_method();
 			$new_value = $new_object->$getter_method();
+
 			if (is_array($old_value) && is_array($new_value)) {
 				array_multisort($old_value);
 				array_multisort($new_value);
