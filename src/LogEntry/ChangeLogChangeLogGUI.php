@@ -27,14 +27,14 @@ abstract class ChangeLogChangeLogGUI {
 
 
 	public function __construct() {
-		self::dic()->template()->getStandardTemplate();
-		self::dic()->template()->addCss(self::plugin()->directory() . '/templates/css/ChangeLog.css');
-		self::dic()->template()->addJavaScript(self::plugin()->directory() . '/templates/js/ChangeLog.js');
+		self::dic()->mainTemplate()->getStandardTemplate();
+		self::dic()->mainTemplate()->addCss(self::plugin()->directory() . '/templates/css/ChangeLog.css');
+		self::dic()->mainTemplate()->addJavaScript(self::plugin()->directory() . '/templates/js/ChangeLog.js');
 	}
 
 
 	public function executeCommand() {
-		self::dic()->template()->getStandardTemplate();
+		self::dic()->mainTemplate()->getStandardTemplate();
 
 		$cmd = self::dic()->ctrl()->getCmd(self::CMD_INDEX);
 		$this->checkPermission();
@@ -47,7 +47,7 @@ abstract class ChangeLogChangeLogGUI {
 				break;
 		}
 
-		self::dic()->template()->show();
+		self::dic()->mainTemplate()->show();
 	}
 
 
@@ -63,7 +63,7 @@ abstract class ChangeLogChangeLogGUI {
 
 	protected function index() {
 		$table = $this->getTableGUI(self::CMD_INDEX);
-		self::dic()->template()->setContent($table->getHTML());
+		self::dic()->mainTemplate()->setContent($table->getHTML());
 	}
 
 

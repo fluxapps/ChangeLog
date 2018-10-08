@@ -62,6 +62,8 @@ class ComposerStaticInit628f013cbfcb828af17e6725cfa3b7e0
         'srag\\DIC\\Exception\\DICException' => __DIR__ . '/..' . '/srag/dic/src/Exception/DICException.php',
         'srag\\DIC\\Plugin\\Plugin' => __DIR__ . '/..' . '/srag/dic/src/Plugin/Plugin.php',
         'srag\\DIC\\Plugin\\PluginInterface' => __DIR__ . '/..' . '/srag/dic/src/Plugin/PluginInterface.php',
+        'srag\\DIC\\Version\\Version' => __DIR__ . '/..' . '/srag/dic/src/Version/Version.php',
+        'srag\\DIC\\Version\\VersionInterface' => __DIR__ . '/..' . '/srag/dic/src/Version/VersionInterface.php',
         'srag\\Plugins\\ChangeLog\\ChangeLog\\ChangeLogChangeLog' => __DIR__ . '/../..' . '/src/ChangeLog/ChangeLogChangeLog.php',
         'srag\\Plugins\\ChangeLog\\Component\\ChangeLogComponent' => __DIR__ . '/../..' . '/src/Component/ChangeLogComponent.php',
         'srag\\Plugins\\ChangeLog\\Component\\ChangeLogComponentCourseParticipant' => __DIR__ . '/../..' . '/src/Component/ChangeLogComponentCourseParticipant.php',

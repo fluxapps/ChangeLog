@@ -20,7 +20,7 @@ class ChangeLogModificationGUI extends ChangeLogChangeLogGUI {
 
 
 	protected function index() {
-		self::dic()->template()->setTitle(self::plugin()->translate('modification_log'));
+		self::dic()->mainTemplate()->setTitle(self::plugin()->translate('modification_log'));
 		parent::index();
 	}
 }

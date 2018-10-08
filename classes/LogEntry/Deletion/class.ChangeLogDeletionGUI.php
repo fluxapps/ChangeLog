@@ -24,7 +24,7 @@ class ChangeLogDeletionGUI extends ChangeLogChangeLogGUI {
 		/** @var ChangeLogDeletionEntry $deletion */
 		$deletion = ChangeLogDeletionEntry::findOrFail((int)$_GET['deletion_id']);
 		$table = $this->renderTable($deletion->getAdditionalData());
-		self::dic()->template()->setContent($table);
+		self::dic()->mainTemplate()->setContent($table);
 		if (self::dic()->ctrl()->isAsynch()) {
 			echo $table;
 			exit();
@@ -33,7 +33,7 @@ class ChangeLogDeletionGUI extends ChangeLogChangeLogGUI {
 
 
 	protected function index() {
-		self::dic()->template()->setTitle(self::plugin()->translate('deletion_log'));
+		self::dic()->mainTemplate()->setTitle(self::plugin()->translate('deletion_log'));
 		parent::index();
 	}
 
