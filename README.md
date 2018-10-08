@@ -9,6 +9,29 @@ git clone git@git.studer-raimann.ch:ILIAS/Plugins/ChangeLog.git ChangeLog
 ```
 Update, activate and config the plugin in the ILIAS Plugin Administration
 
+### ILIAS-Core-Patch
+In order for a user's update to be recognized correctly, it needs a patch in the ILIAS core in `Services/User/classes/class.ilObjUser.php::update`:
+```php
+...
+class ilObjUser {
+	...
+	public function update() {
+		...
+		global $ilErr, $ilDB, $ilAppEventHandler;
+		
+		//PATCH srag MSTX
+		$ilAppEventHandler->raise("Services/User", "beforeUpdate",
+		array("user_obj" => $this));
+		//PATCH srag MSTX
+		
+		$this->syncActive();
+		
+		...
+	}
+	...
+}
+```
+
 ### Dependencies
 * [composer](https://getcomposer.org)
 * [CtrlMainMenu](https://github.com/studer-raimann/CtrlMainMenu)
