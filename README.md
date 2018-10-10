@@ -33,6 +33,7 @@ class ilObjUser {
 ```
 
 ### Dependencies
+* PHP >=7.0
 * [composer](https://getcomposer.org)
 * [CtrlMainMenu](https://github.com/studer-raimann/CtrlMainMenu)
 * [srag/activerecordconfig](https://packagist.org/packages/srag/activerecordconfig)
