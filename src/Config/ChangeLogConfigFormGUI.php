@@ -21,8 +21,8 @@ class ChangeLogConfigFormGUI extends ActiveRecordConfigFormGUI {
 	/**
 	 * @inheritdoc
 	 */
-	protected function setForm() {
-		parent::setForm();
+	protected function initForm() {
+		parent::initForm();
 
 		$conf_roles = new ilTextInputGUI(self::plugin()->translate("conf_roles"), ChangeLogConfig::KEY_ROLES);
 		$conf_roles->setInfo(self::plugin()->translate("conf_roles_info"));
