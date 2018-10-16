@@ -17,5 +17,5 @@ class ilChangeLogConfigGUI extends ActiveRecordConfigGUI {
 	/**
 	 * @var array
 	 */
-	protected static $tabs = [ "configuration" => ChangeLogConfigFormGUI::class ];
+	protected static $tabs = [ self::TAB_CONFIGURATION => ChangeLogConfigFormGUI::class ];
 }
