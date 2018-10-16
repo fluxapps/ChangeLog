@@ -14,5 +14,8 @@ use srag\Plugins\ChangeLog\Config\ChangeLogConfigFormGUI;
 class ilChangeLogConfigGUI extends ActiveRecordConfigGUI {
 
 	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
-	const CONFIG_FORM_GUI_CLASS_NAME = ChangeLogConfigFormGUI::class;
+	/**
+	 * @var array
+	 */
+	protected static $tabs = [ "configuration" => ChangeLogConfigFormGUI::class ];
 }
