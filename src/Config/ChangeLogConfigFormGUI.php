@@ -2,7 +2,6 @@
 
 namespace srag\Plugins\ChangeLog\Config;
 
-use ilChangeLogConfigGUI;
 use ilChangeLogPlugin;
 use ilTextInputGUI;
 use srag\ActiveRecordConfig\ActiveRecordConfigFormGUI;
@@ -25,8 +24,8 @@ class ChangeLogConfigFormGUI extends ActiveRecordConfigFormGUI {
 	protected function initForm() {
 		parent::initForm();
 
-		$conf_roles = new ilTextInputGUI(self::plugin()->translate("roles", ilChangeLogConfigGUI::LANG_MODULE_CONFIG), ChangeLogConfig::KEY_ROLES);
-		$conf_roles->setInfo(self::plugin()->translate("roles_info", ilChangeLogConfigGUI::LANG_MODULE_CONFIG));
+		$conf_roles = new ilTextInputGUI($this->txt("roles"), ChangeLogConfig::KEY_ROLES);
+		$conf_roles->setInfo($this->txt("roles_info"));
 		$this->addItem($conf_roles);
 	}
 
