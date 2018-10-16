@@ -28,8 +28,8 @@ mod_col_title#:#Title
 show#:#Show
 deleted_between#:#Deleted in Range
 modified_between#:#Modified in Range
-conf_roles#:#Permitted Roles
-conf_roles_info#:#Enter comma separated ids of roles, which should be granted permission to the changelog.
+config_roles#:#Permitted Roles
+config_roles_info#:#Enter comma separated ids of roles, which should be granted permission to the changelog.
 newly_created#:#Newly Created
 deletion_mode_delete#:#Deleted
 deletion_mode_trash#:#ILIAS Trash
@@ -40,9 +40,9 @@ object#:#ILIAS object
 user_assigment#:#User Assignment (Organisational Unit)
 user_removed_from_course#:#User was removed as participant from course
 course_participant#:#Course participant
-activerecordconfig_configuration#:#Configuration
-activerecordconfig_configuration_saved#:#Configuration saved
-activerecordconfig_save#:#Save
+config_configuration#:#Configuration
+config_configuration_saved#:#Configuration saved
+config_save#:#Save
 removeplugindataconfirm_cancel#:#Cancel
 removeplugindataconfirm_confirm_remove_data#:#Do you want to remove the %1$s data as well? At most, you just want to disable the %1$s plugin?
 removeplugindataconfirm_deactivate#:#Just deactivate %1$s plugin

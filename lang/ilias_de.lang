@@ -28,8 +28,8 @@ mod_col_title#:#Titel
 show#:#Anzeigen
 deleted_between#:#Gelöscht während
 modified_between#:#Geändert während
-conf_roles#:#Erlaubte Rollen
-conf_roles_info#:#Geben Sie durch Komma getrennte IDs von Rollen ein, denen die Berechtigung für das Änderungsprotokoll erteilt werden soll.
+config_roles#:#Erlaubte Rollen
+config_roles_info#:#Geben Sie durch Komma getrennte IDs von Rollen ein, denen die Berechtigung für das Änderungsprotokoll erteilt werden soll.
 newly_created#:#Neu erstellt
 deletion_mode_delete#:#Gelöscht
 deletion_mode_trash#:#ILIAS Papierkorb
@@ -40,9 +40,9 @@ object#:#ILIAS-Objekt
 user_assigment#:#Benutzerzuordnung (Organisationseinheit)
 user_removed_from_course#:#Der Benutzer wurde als Teilnehmer aus dem Kurs entfernt
 course_participant#:#Kursteilnehmer
-activerecordconfig_configuration#:#Konfiguration
-activerecordconfig_configuration_saved#:#Konfiguration gespeichert
-activerecordconfig_save#:#Speichern
+config_configuration#:#Konfiguration
+config_configuration_saved#:#Konfiguration gespeichert
+config_save#:#Speichern
 removeplugindataconfirm_cancel#:#Abbrechen
 removeplugindataconfirm_confirm_remove_data#:#Möchten Sie die %1$s-Daten auch entfernen? Allenfalls möchten Sie das %1$s-Plugin nur deaktivieren?
 removeplugindataconfirm_deactivate#:#%1$s-Plugin nur deaktivieren
