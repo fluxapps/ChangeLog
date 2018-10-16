@@ -33,6 +33,7 @@ class ilObjUser {
 ```
 
 ### Dependencies
+* ILIAS 5.3
 * PHP >=7.0
 * [composer](https://getcomposer.org)
 * [CtrlMainMenu](https://github.com/studer-raimann/CtrlMainMenu)
