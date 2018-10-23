@@ -6,7 +6,7 @@ use ilCombinationInputGUI;
 use ilDateTimeInputGUI;
 use ilObjUser;
 use ilTextInputGUI;
-use srag\CustomInputGUIs\MultiSelectSearchInputGUI;
+use srag\CustomInputGUIs\MultiSelectSearchInputGUI\MultiSelectSearchInputGUI;
 use srag\Plugins\ChangeLog\ChangeLog\ChangeLogChangeLog;
 use srag\Plugins\ChangeLog\LogEntry\ChangeLogChangeLogTableGUI;
 
