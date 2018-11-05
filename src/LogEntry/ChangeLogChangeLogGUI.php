@@ -8,6 +8,7 @@ use ilPersonalDesktopGUI;
 use ilUtil;
 use srag\DIC\DICTrait;
 use srag\Plugins\ChangeLog\Config\ChangeLogConfig;
+use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**
  * Class ChangeLogChangeLogGUI
@@ -19,6 +20,7 @@ use srag\Plugins\ChangeLog\Config\ChangeLogConfig;
 abstract class ChangeLogChangeLogGUI {
 
 	use DICTrait;
+	use ChangeLogTrait;
 	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
 	const CMD_INDEX = "index";
 	const CMD_GET_ADDITIONAL_DATA = "getAdditionalData";

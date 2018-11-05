@@ -6,6 +6,7 @@ namespace srag\Plugins\ChangeLog\LogEntry\Modification;
 use ActiveRecord;
 use ilChangeLogPlugin;
 use srag\DIC\DICTrait;
+use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**
  * Class ChangeLogModification
@@ -17,6 +18,7 @@ use srag\DIC\DICTrait;
 class ChangeLogModification extends ActiveRecord {
 
 	use DICTrait;
+	use ChangeLogTrait;
 	const TABLE_NAME = "chlog_modification";
 	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
 

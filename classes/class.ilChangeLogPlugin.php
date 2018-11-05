@@ -11,6 +11,7 @@ use srag\Plugins\ChangeLog\Config\ChangeLogConfig;
 use srag\Plugins\ChangeLog\LogEntry\Deletion\ChangeLogDeletionEntry;
 use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModification;
 use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationEntry;
+use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 use srag\Plugins\CtrlMainMenu\Entry\ctrlmmEntry;
 use srag\Plugins\CtrlMainMenu\EntryTypes\Ctrl\ctrlmmEntryCtrl;
 use srag\Plugins\CtrlMainMenu\EntryTypes\Dropdown\ctrlmmEntryDropdown;
@@ -25,6 +26,7 @@ use srag\RemovePluginDataConfirm\PluginUninstallTrait;
 class ilChangeLogPlugin extends ilEventHookPlugin {
 
 	use PluginUninstallTrait;
+	use ChangeLogTrait;
 	const PLUGIN_ID = "chlog";
 	const PLUGIN_NAME = "ChangeLog";
 	const PLUGIN_CLASS_NAME = self::class;

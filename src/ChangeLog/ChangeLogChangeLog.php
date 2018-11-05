@@ -10,6 +10,7 @@ use srag\Plugins\ChangeLog\Component\ChangeLogComponentCourseParticipant;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponentObject;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponentOrgUnit;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponentUser;
+use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**
  * Class ChangeLogChangeLog
@@ -21,6 +22,7 @@ use srag\Plugins\ChangeLog\Component\ChangeLogComponentUser;
 class ChangeLogChangeLog {
 
 	use DICTrait;
+	use ChangeLogTrait;
 	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
 	/**
 	 * @var ChangeLogChangeLog

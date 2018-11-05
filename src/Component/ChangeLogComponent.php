@@ -8,6 +8,7 @@ use srag\DIC\DICTrait;
 use srag\Plugins\ChangeLog\LogEntry\Creation\ChangeLogCreationEntry;
 use srag\Plugins\ChangeLog\LogEntry\Deletion\ChangeLogDeletionEntry;
 use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationEntry;
+use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**
  * Interface ChangeLogComponent
@@ -17,6 +18,7 @@ use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationEntry;
 abstract class ChangeLogComponent {
 
 	use DICTrait;
+	use ChangeLogTrait;
 	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
 	const COMPONENT_ID = '';
 	/**

@@ -5,6 +5,7 @@ namespace srag\Plugins\ChangeLog\Config;
 use ilChangeLogPlugin;
 use ilTextInputGUI;
 use srag\ActiveRecordConfig\ActiveRecordConfigFormGUI;
+use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**
  * Class ChangeLogConfigFormGUI
@@ -15,6 +16,7 @@ use srag\ActiveRecordConfig\ActiveRecordConfigFormGUI;
  */
 class ChangeLogConfigFormGUI extends ActiveRecordConfigFormGUI {
 
+	use ChangeLogTrait;
 	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
 
 

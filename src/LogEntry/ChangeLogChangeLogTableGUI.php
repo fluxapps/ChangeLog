@@ -9,6 +9,7 @@ use ilObjUser;
 use ilTable2GUI;
 use srag\DIC\DICTrait;
 use srag\Plugins\ChangeLog\ChangeLog\ChangeLogChangeLog;
+use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**
  * Class ChangeLogChangeLogTableGUI
@@ -20,6 +21,7 @@ use srag\Plugins\ChangeLog\ChangeLog\ChangeLogChangeLog;
 class ChangeLogChangeLogTableGUI extends ilTable2GUI {
 
 	use DICTrait;
+	use ChangeLogTrait;
 	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
 	/**
 	 * @var array

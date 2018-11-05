@@ -7,6 +7,7 @@ use ActiveRecord;
 use ilChangeLogPlugin;
 use srag\ActiveRecordConfig\ActiveRecordConfig;
 use srag\DIC\DICTrait;
+use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**
  * Class ChangeLogLogEntry
@@ -20,6 +21,7 @@ use srag\DIC\DICTrait;
 abstract class ChangeLogLogEntry extends ActiveRecord {
 
 	use DICTrait;
+	use ChangeLogTrait;
 	/**
 	 * @var string
 	 *

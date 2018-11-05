@@ -5,6 +5,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
 
 use srag\ActiveRecordConfig\ActiveRecordConfigGUI;
 use srag\Plugins\ChangeLog\Config\ChangeLogConfigFormGUI;
+use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**
  * Class ilChangeLogConfigGUI
@@ -13,6 +14,7 @@ use srag\Plugins\ChangeLog\Config\ChangeLogConfigFormGUI;
  */
 class ilChangeLogConfigGUI extends ActiveRecordConfigGUI {
 
+	use ChangeLogTrait;
 	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
 	/**
 	 * @var array

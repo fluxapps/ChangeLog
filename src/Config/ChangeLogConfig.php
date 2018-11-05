@@ -6,6 +6,7 @@ namespace srag\Plugins\ChangeLog\Config;
 use ChangeLogRemoveDataConfirm;
 use ilChangeLogPlugin;
 use srag\ActiveRecordConfig\ActiveRecordConfig;
+use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**
  * Class ChangeLogConfig
@@ -16,6 +17,7 @@ use srag\ActiveRecordConfig\ActiveRecordConfig;
  */
 class ChangeLogConfig extends ActiveRecordConfig {
 
+	use ChangeLogTrait;
 	const TABLE_NAME = "chlog_config";
 	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
 	const KEY_ROLES = "conf_roles";
