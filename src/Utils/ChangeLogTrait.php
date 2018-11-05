@@ -17,7 +17,7 @@ trait ChangeLogTrait {
 	/**
 	 * @return Access
 	 */
-	protected static function access() {
+	protected static function access()/*: Access*/ {
 		return Access::getInstance();
 	}
 
@@ -25,7 +25,7 @@ trait ChangeLogTrait {
 	/**
 	 * @return Permission
 	 */
-	protected static function permission() {
+	protected static function permission()/*: Permission*/ {
 		return Permission::getInstance();
 	}
 }
