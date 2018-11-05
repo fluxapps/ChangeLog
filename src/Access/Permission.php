@@ -39,7 +39,7 @@ final class Permission {
 	/**
 	 * Permission constructor
 	 */
-	public function __construct() {
+	private function __construct() {
 
 	}
 }
