@@ -3,7 +3,7 @@
 namespace srag\Plugins\ChangeLog\Utils;
 
 use srag\Plugins\ChangeLog\Access\Access;
-use srag\Plugins\ChangeLog\Access\Permission;
+use srag\Plugins\ChangeLog\Access\Ilias;
 
 /**
  * Trait ChangeLogTrait
@@ -23,9 +23,9 @@ trait ChangeLogTrait {
 
 
 	/**
-	 * @return Permission
+	 * @return Ilias
 	 */
-	protected static function permission()/*: Permission*/ {
-		return Permission::getInstance();
+	protected static function ilias()/*: Ilias*/ {
+		return Ilias::getInstance();
 	}
 }

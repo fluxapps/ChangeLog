@@ -77,7 +77,7 @@ class ComposerStaticInit628f013cbfcb828af17e6725cfa3b7e0
         'srag\\DIC\\Version\\Version' => __DIR__ . '/..' . '/srag/dic/src/Version/Version.php',
         'srag\\DIC\\Version\\VersionInterface' => __DIR__ . '/..' . '/srag/dic/src/Version/VersionInterface.php',
         'srag\\Plugins\\ChangeLog\\Access\\Access' => __DIR__ . '/../..' . '/src/Access/Access.php',
-        'srag\\Plugins\\ChangeLog\\Access\\Permission' => __DIR__ . '/../..' . '/src/Access/Permission.php',
+        'srag\\Plugins\\ChangeLog\\Access\\Ilias' => __DIR__ . '/../..' . '/src/Access/Ilias.php',
         'srag\\Plugins\\ChangeLog\\ChangeLog\\ChangeLogChangeLog' => __DIR__ . '/../..' . '/src/ChangeLog/ChangeLogChangeLog.php',
         'srag\\Plugins\\ChangeLog\\Component\\ChangeLogComponent' => __DIR__ . '/../..' . '/src/Component/ChangeLogComponent.php',
         'srag\\Plugins\\ChangeLog\\Component\\ChangeLogComponentCourseParticipant' => __DIR__ . '/../..' . '/src/Component/ChangeLogComponentCourseParticipant.php',

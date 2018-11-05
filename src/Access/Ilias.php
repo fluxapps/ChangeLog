@@ -7,13 +7,13 @@ use srag\DIC\DICTrait;
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**
- * Class Permission
+ * Class Ilias
  *
  * @package srag\Plugins\ChangeLog\Access
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-final class Permission {
+final class Ilias {
 
 	use DICTrait;
 	use ChangeLogTrait;
@@ -37,7 +37,7 @@ final class Permission {
 
 
 	/**
-	 * Permission constructor
+	 * Ilias constructor
 	 */
 	private function __construct() {
 

@@ -42,7 +42,7 @@ return array(
     'srag\\DIC\\Version\\Version' => $vendorDir . '/srag/dic/src/Version/Version.php',
     'srag\\DIC\\Version\\VersionInterface' => $vendorDir . '/srag/dic/src/Version/VersionInterface.php',
     'srag\\Plugins\\ChangeLog\\Access\\Access' => $baseDir . '/src/Access/Access.php',
-    'srag\\Plugins\\ChangeLog\\Access\\Permission' => $baseDir . '/src/Access/Permission.php',
+    'srag\\Plugins\\ChangeLog\\Access\\Ilias' => $baseDir . '/src/Access/Ilias.php',
     'srag\\Plugins\\ChangeLog\\ChangeLog\\ChangeLogChangeLog' => $baseDir . '/src/ChangeLog/ChangeLogChangeLog.php',
     'srag\\Plugins\\ChangeLog\\Component\\ChangeLogComponent' => $baseDir . '/src/Component/ChangeLogComponent.php',
     'srag\\Plugins\\ChangeLog\\Component\\ChangeLogComponentCourseParticipant' => $baseDir . '/src/Component/ChangeLogComponentCourseParticipant.php',
