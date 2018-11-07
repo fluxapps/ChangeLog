@@ -3,7 +3,6 @@
 
 namespace srag\Plugins\ChangeLog\Config;
 
-use ChangeLogRemoveDataConfirm;
 use ilChangeLogPlugin;
 use srag\ActiveRecordConfig\ActiveRecordConfig;
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
@@ -21,6 +20,12 @@ class ChangeLogConfig extends ActiveRecordConfig {
 	const TABLE_NAME = "chlog_config";
 	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
 	const KEY_ROLES = "conf_roles";
+	/**
+	 * @var array
+	 */
+	protected static $fields = [
+
+	];
 
 
 	/**
@@ -40,30 +45,5 @@ class ChangeLogConfig extends ActiveRecordConfig {
 	 */
 	public static function setValueByKey($name, $value) {
 		self::setStringValue($name, $value);
-	}
-
-
-	/**
-	 * @return bool|null
-	 */
-	public static function getUninstallRemovesData()/*: ?bool*/ {
-		return self::getXValue(ChangeLogRemoveDataConfirm::KEY_UNINSTALL_REMOVES_DATA, ChangeLogRemoveDataConfirm::DEFAULT_UNINSTALL_REMOVES_DATA);
-	}
-
-
-	/**
-	 * @param bool $uninstall_removes_data
-	 */
-	public static function setUninstallRemovesData(/*bool*/
-		$uninstall_removes_data)/*: void*/ {
-		self::setBooleanValue(ChangeLogRemoveDataConfirm::KEY_UNINSTALL_REMOVES_DATA, $uninstall_removes_data);
-	}
-
-
-	/**
-	 *
-	 */
-	public static function removeUninstallRemovesData()/*: void*/ {
-		self::removeName(ChangeLogRemoveDataConfirm::KEY_UNINSTALL_REMOVES_DATA);
 	}
 }
