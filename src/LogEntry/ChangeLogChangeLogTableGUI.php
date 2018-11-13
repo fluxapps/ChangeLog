@@ -7,7 +7,7 @@ use ilChangeLogPlugin;
 use ilExcel;
 use ilObjUser;
 use ilTable2GUI;
-use srag\DIC\DICTrait;
+use srag\DIC\ChangeLog\DICTrait;
 use srag\Plugins\ChangeLog\ChangeLog\ChangeLogChangeLog;
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 

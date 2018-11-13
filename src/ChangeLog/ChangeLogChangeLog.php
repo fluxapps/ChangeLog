@@ -4,7 +4,7 @@ namespace srag\Plugins\ChangeLog\ChangeLog;
 
 use ilChangeLogPlugin;
 use ilException;
-use srag\DIC\DICTrait;
+use srag\DIC\ChangeLog\DICTrait;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponent;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponentCourseParticipant;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponentObject;

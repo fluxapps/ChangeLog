@@ -6,7 +6,7 @@ namespace srag\Plugins\ChangeLog\LogEntry;
 use ilChangeLogPlugin;
 use ilPersonalDesktopGUI;
 use ilUtil;
-use srag\DIC\DICTrait;
+use srag\DIC\ChangeLog\DICTrait;
 use srag\Plugins\ChangeLog\Config\ChangeLogConfig;
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 

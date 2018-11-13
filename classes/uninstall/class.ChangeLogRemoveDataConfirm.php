@@ -3,7 +3,7 @@
 require_once __DIR__ . "/../../vendor/autoload.php";
 
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
-use srag\RemovePluginDataConfirm\AbstractRemovePluginDataConfirm;
+use srag\RemovePluginDataConfirm\ChangeLog\AbstractRemovePluginDataConfirm;
 
 /**
  * Class ChangeLogRemoveDataConfirm

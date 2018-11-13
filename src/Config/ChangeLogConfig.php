@@ -4,7 +4,7 @@
 namespace srag\Plugins\ChangeLog\Config;
 
 use ilChangeLogPlugin;
-use srag\ActiveRecordConfig\ActiveRecordConfig;
+use srag\ActiveRecordConfig\ChangeLog\ActiveRecordConfig;
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**

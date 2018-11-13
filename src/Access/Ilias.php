@@ -3,7 +3,7 @@
 namespace srag\Plugins\ChangeLog\Access;
 
 use ilChangeLogPlugin;
-use srag\DIC\DICTrait;
+use srag\DIC\ChangeLog\DICTrait;
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**

@@ -5,8 +5,8 @@ namespace srag\Plugins\ChangeLog\LogEntry;
 
 use ActiveRecord;
 use ilChangeLogPlugin;
-use srag\ActiveRecordConfig\ActiveRecordConfig;
-use srag\DIC\DICTrait;
+use srag\ActiveRecordConfig\ChangeLog\ActiveRecordConfig;
+use srag\DIC\ChangeLog\DICTrait;
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**

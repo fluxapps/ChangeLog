@@ -1,14 +1,14 @@
 <?php
 
-namespace srag\ActiveRecordConfig;
+namespace srag\ActiveRecordConfig\ChangeLog;
 
 use ilPropertyFormGUI;
-use srag\DIC\DICTrait;
+use srag\DIC\ChangeLog\DICTrait;
 
 /**
  * Class ActiveRecordConfigFormGUI
  *
- * @package srag\ActiveRecordConfig
+ * @package srag\ActiveRecordConfig\ChangeLog
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */

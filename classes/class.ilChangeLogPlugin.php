@@ -16,7 +16,7 @@ use srag\Plugins\CtrlMainMenu\Entry\ctrlmmEntry;
 use srag\Plugins\CtrlMainMenu\EntryTypes\Ctrl\ctrlmmEntryCtrl;
 use srag\Plugins\CtrlMainMenu\EntryTypes\Dropdown\ctrlmmEntryDropdown;
 use srag\Plugins\CtrlMainMenu\Menu\ctrlmmMenu;
-use srag\RemovePluginDataConfirm\PluginUninstallTrait;
+use srag\RemovePluginDataConfirm\ChangeLog\PluginUninstallTrait;
 
 /**
  * Class ilChangeLogPlugin

@@ -2,7 +2,7 @@
 
 namespace srag\Plugins\ChangeLog\LogEntry\Deletion;
 
-use srag\ActiveRecordConfig\ActiveRecordConfig;
+use srag\ActiveRecordConfig\ChangeLog\ActiveRecordConfig;
 use srag\Plugins\ChangeLog\LogEntry\ChangeLogLogEntry;
 
 /**

@@ -1,19 +1,19 @@
 <?php
 
-namespace srag\ActiveRecordConfig;
+namespace srag\ActiveRecordConfig\ChangeLog;
 
 use ActiveRecord;
 use arConnector;
 use arException;
 use ilDateTime;
 use ilDateTimeException;
-use srag\ActiveRecordConfig\Exception\ActiveRecordConfigException;
-use srag\DIC\DICTrait;
+use srag\ActiveRecordConfig\ChangeLog\Exception\ActiveRecordConfigException;
+use srag\DIC\ChangeLog\DICTrait;
 
 /**
  * Class ActiveRecordConfig
  *
- * @package srag\ActiveRecordConfig
+ * @package srag\ActiveRecordConfig\ChangeLog
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */

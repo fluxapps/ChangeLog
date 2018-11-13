@@ -4,7 +4,7 @@ namespace srag\Plugins\ChangeLog\Config;
 
 use ilChangeLogPlugin;
 use ilTextInputGUI;
-use srag\ActiveRecordConfig\ActiveRecordConfigFormGUI;
+use srag\ActiveRecordConfig\ChangeLog\ActiveRecordConfigFormGUI;
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**

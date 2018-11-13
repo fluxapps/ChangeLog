@@ -3,7 +3,7 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use srag\ActiveRecordConfig\ActiveRecordConfigGUI;
+use srag\ActiveRecordConfig\ChangeLog\ActiveRecordConfigGUI;
 use srag\Plugins\ChangeLog\Config\ChangeLogConfigFormGUI;
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
