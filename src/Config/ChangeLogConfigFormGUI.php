@@ -24,7 +24,7 @@ class ChangeLogConfigFormGUI extends ActiveRecordConfigFormGUI {
 	/**
 	 * @inheritdoc
 	 */
-	protected function initFields() {
+	protected function initFields()/*: void*/ {
 		$this->fields = [
 			ChangeLogConfig::KEY_ROLES => [
 				self::PROPERTY_CLASS => ilTextInputGUI::class
