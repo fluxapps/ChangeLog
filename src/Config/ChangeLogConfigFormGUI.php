@@ -18,25 +18,17 @@ class ChangeLogConfigFormGUI extends ActiveRecordConfigFormGUI {
 
 	use ChangeLogTrait;
 	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
+	const CONFIG_CLASS_NAME = ChangeLogConfig::class;
 
 
 	/**
 	 * @inheritdoc
 	 */
-	protected function initForm() {
-		parent::initForm();
-
-		$conf_roles = new ilTextInputGUI($this->txt("roles"), ChangeLogConfig::KEY_ROLES);
-		$conf_roles->setInfo($this->txt("roles_info"));
-		$this->addItem($conf_roles);
-	}
-
-
-	/**
-	 * @inheritdoc
-	 */
-	public function updateConfig() {
-		$conf_roles = $this->getInput(ChangeLogConfig::KEY_ROLES);
-		ChangeLogConfig::setValueByKey(ChangeLogConfig::KEY_ROLES, $conf_roles);
+	protected function initFields() {
+		$this->fields = [
+			ChangeLogConfig::KEY_ROLES => [
+				self::PROPERTY_CLASS => ilTextInputGUI::class
+			]
+		];
 	}
 }
