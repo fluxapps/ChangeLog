@@ -34,7 +34,7 @@ newly_created#:#Newly Created
 deletion_mode_delete#:#Deleted
 deletion_mode_trash#:#ILIAS Trash
 user_deleted#:#User %s was deleted
-user_deleted_info#:#User was deleted. More info are not available because it was already deleted in database before ILIAS core has triggered the deleteUser event!
+user_deleted_info#:#User was deleted. More info are not available because it was already deleted in database before ILIAS core has triggered the deleteUser event
 user#:#User
 object#:#ILIAS object
 user_assigment#:#User Assignment (Organisational Unit)
@@ -48,6 +48,6 @@ removeplugindataconfirm_confirm_remove_data#:#Do you want to remove the %1$s dat
 removeplugindataconfirm_deactivate#:#Just deactivate %1$s plugin
 removeplugindataconfirm_data#:#%1$s data
 removeplugindataconfirm_keep_data#:#Keep %1$s data
-removeplugindataconfirm_msg_kept_data#:#The %1$s data was kept!
-removeplugindataconfirm_msg_removed_data#:#The %1$s data was also removed!
+removeplugindataconfirm_msg_kept_data#:#The %1$s data was kept
+removeplugindataconfirm_msg_removed_data#:#The %1$s data was also removed
 removeplugindataconfirm_remove_data#:#Remove %1$s data

@@ -34,7 +34,7 @@ newly_created#:#Neu erstellt
 deletion_mode_delete#:#Gelöscht
 deletion_mode_trash#:#ILIAS Papierkorb
 user_deleted#:#Benutzer %s wurde gelöscht
-user_deleted_info#:#Benutzer wurde gelöscht. Weitere Informationen sind nicht verfügbar, weil sie bereits in der Datenbank gelöscht wurde, bevor ILIAS-Core das deleteUser-Ereignis ausgelöst hat!
+user_deleted_info#:#Benutzer wurde gelöscht. Weitere Informationen sind nicht verfügbar, weil sie bereits in der Datenbank gelöscht wurde, bevor ILIAS-Core das deleteUser-Ereignis ausgelöst hat
 user#:#Benutzer
 object#:#ILIAS-Objekt
 user_assigment#:#Benutzerzuordnung (Organisationseinheit)
@@ -48,6 +48,6 @@ removeplugindataconfirm_confirm_remove_data#:#Möchten Sie die %1$s-Daten auch e
 removeplugindataconfirm_deactivate#:#%1$s-Plugin nur deaktivieren
 removeplugindataconfirm_data#:#%1$s-Daten
 removeplugindataconfirm_keep_data#:#%1$s-Daten behalten
-removeplugindataconfirm_msg_kept_data#:#Die %1$s-Daten wurden behalten!
-removeplugindataconfirm_msg_removed_data#:#Die %1$s-Daten wurden auch entfernt!
+removeplugindataconfirm_msg_kept_data#:#Die %1$s-Daten wurden behalten
+removeplugindataconfirm_msg_removed_data#:#Die %1$s-Daten wurden auch entfernt
 removeplugindataconfirm_remove_data#:#Entferne %1$s-Daten
