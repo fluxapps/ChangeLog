@@ -1,20 +1,20 @@
 <?php
 
-namespace srag\RemovePluginDataConfirm\ChangeLog;
+namespace srag\CustomInputGUIs\ChangeLog\TableGUI\Exception;
 
 use ilException;
 
 /**
- * Class RemovePluginDataConfirmException
+ * Class TableGUIException
  *
- * @package srag\RemovePluginDataConfirm\ChangeLog
+ * @package srag\CustomInputGUIs\ChangeLog\TableGUI\Exception
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class RemovePluginDataConfirmException extends ilException {
+final class TableGUIException extends ilException {
 
 	/**
-	 * RemovePluginDataConfirmException constructor
+	 * TableGUIException constructor
 	 *
 	 * @param string $message
 	 * @param int    $code

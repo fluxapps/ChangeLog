@@ -136,7 +136,7 @@ class ChangeLogDeletionTableGUI extends ChangeLogChangeLogTableGUI {
 		$modal->setId('chlog-del-data');
 		$modal->setBody('<section></section>');
 
-		return parent::render() . $modal->getHTML();
+		return parent::render() . self::output()->getHTML($modal);
 	}
 
 

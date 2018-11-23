@@ -65,7 +65,7 @@ abstract class ChangeLogChangeLogGUI {
 
 	protected function index() {
 		$table = $this->getTableGUI(self::CMD_INDEX);
-		self::dic()->mainTemplate()->setContent($table->getHTML());
+		self::output()->output($table);
 	}
 
 
