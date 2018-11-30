@@ -46,6 +46,7 @@ return array(
     'srag\\DIC\\ChangeLog\\Exception\\DICException' => $vendorDir . '/srag/dic/src/Exception/DICException.php',
     'srag\\DIC\\ChangeLog\\Output\\Output' => $vendorDir . '/srag/dic/src/Output/Output.php',
     'srag\\DIC\\ChangeLog\\Output\\OutputInterface' => $vendorDir . '/srag/dic/src/Output/OutputInterface.php',
+    'srag\\DIC\\ChangeLog\\PHPVersionChecker' => $vendorDir . '/srag/dic/src/PHPVersionChecker.php',
     'srag\\DIC\\ChangeLog\\Plugin\\Plugin' => $vendorDir . '/srag/dic/src/Plugin/Plugin.php',
     'srag\\DIC\\ChangeLog\\Plugin\\PluginInterface' => $vendorDir . '/srag/dic/src/Plugin/PluginInterface.php',
     'srag\\DIC\\ChangeLog\\Plugin\\Pluginable' => $vendorDir . '/srag/dic/src/Plugin/Pluginable.php',
