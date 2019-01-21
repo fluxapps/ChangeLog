@@ -19,10 +19,10 @@ class ilObjUser {
 		...
 		global $ilErr, $ilDB, $ilAppEventHandler;
 		
-		//PATCH srag MSTX
+		//PATCH ChangeLog
 		$ilAppEventHandler->raise("Services/User", "beforeUpdate",
 		array("user_obj" => $this));
-		//PATCH srag MSTX
+		//PATCH ChangeLog
 		
 		$this->syncActive();
 		
@@ -31,6 +31,10 @@ class ilObjUser {
 	...
 }
 ```
+
+### Some screenshots
+Log table:
+![Log table](./doc/screenshots/log_table.png)
 
 ### Dependencies
 * ILIAS 5.3
