@@ -28,8 +28,8 @@ mod_col_title#:#Titel
 show#:#Anzeigen
 deleted_between#:#Gelöscht während
 modified_between#:#Geändert während
-config_roles#:#Erlaubte Rollen
-config_roles_info#:#Geben Sie durch Komma getrennte IDs von Rollen ein, denen die Berechtigung für das Änderungsprotokoll erteilt werden soll.
+config_conf_roles#:#Erlaubte Rollen
+config_conf_roles_info#:#Geben Sie durch Komma getrennte IDs von Rollen ein, denen die Berechtigung für das Änderungsprotokoll erteilt werden soll.
 newly_created#:#Neu erstellt
 deletion_mode_delete#:#Gelöscht
 deletion_mode_trash#:#ILIAS Papierkorb

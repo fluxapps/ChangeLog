@@ -28,8 +28,8 @@ mod_col_title#:#Title
 show#:#Show
 deleted_between#:#Deleted in Range
 modified_between#:#Modified in Range
-config_roles#:#Permitted Roles
-config_roles_info#:#Enter comma separated ids of roles, which should be granted permission to the changelog.
+config_conf_roles#:#Permitted Roles
+config_conf_roles_info#:#Enter comma separated ids of roles, which should be granted permission to the changelog.
 newly_created#:#Newly Created
 deletion_mode_delete#:#Deleted
 deletion_mode_trash#:#ILIAS Trash

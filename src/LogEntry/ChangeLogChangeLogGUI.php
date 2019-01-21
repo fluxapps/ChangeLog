@@ -54,7 +54,7 @@ abstract class ChangeLogChangeLogGUI {
 
 
 	protected function checkPermission() {
-		$roles = explode(',', ChangeLogConfig::getValueByKey(ChangeLogConfig::KEY_ROLES));
+		$roles = explode(',', ChangeLogConfig::getField(ChangeLogConfig::KEY_ROLES));
 		$roles[] = 2;
 		if (!self::dic()->rbacreview()->isAssignedToAtLeastOneGivenRole(self::dic()->user()->getId(), $roles)) {
 			ilUtil::sendFailure(self::dic()->language()->txt('permission_denied'), true);

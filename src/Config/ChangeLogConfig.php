@@ -24,26 +24,6 @@ class ChangeLogConfig extends ActiveRecordConfig {
 	 * @var array
 	 */
 	protected static $fields = [
-
+		ChangeLogConfig::KEY_ROLES => self::TYPE_STRING
 	];
-
-
-	/**
-	 * @param string      $key
-	 * @param string|null $default_value
-	 *
-	 * @return string
-	 */
-	public static function getValueByKey($key, $default_value = NULL) {
-		return self::getStringValue($key, $default_value);
-	}
-
-
-	/**
-	 * @param string $name
-	 * @param string $value
-	 */
-	public static function setValueByKey($name, $value) {
-		self::setStringValue($name, $value);
-	}
 }
