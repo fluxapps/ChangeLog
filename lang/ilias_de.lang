@@ -1,0 +1,53 @@
+changelog#:#Änderungsprotokoll
+deletion_log#:#Löschprotokoll
+modification_log#:#Änderungsprotokoll
+crs_participant1#:#Admin
+crs_participant2#:#Member
+crs_participant3#:#Tutor
+del_col_component_id#:#Komponente
+del_col_deletion_mode#:#Löschmodus
+del_col_created_at#:#Gelöscht
+del_col_created_user_id#:#Gelöscht durch
+del_col_obj_id#:#Objekt-ID
+del_col_ref_id#:#Referenz-ID
+del_col_title#:#Titel
+del_col_description#:#Beschreibung
+del_col_type#:#Typ
+del_col_context#:#Kontext
+del_col_owner#:#Erstellt durch
+del_col_obj_created_at#:#Erstellt
+del_col_additional_data#:#Zusätzliche Daten
+mod_col_component_id#:#Komponente
+mod_col_old_values#:#Alte Werte
+mod_col_new_values#:#Neue Werte
+mod_col_created_at#:#Geändert
+mod_col_created_user_id#:#Geändert durch
+mod_col_obj_id#:#Objekt-ID
+mod_col_ref_id#:#Referenz-ID
+mod_col_title#:#Titel
+show#:#Anzeigen
+deleted_between#:#Gelöscht während
+modified_between#:#Geändert während
+config_conf_roles#:#Erlaubte Rollen
+config_conf_roles_info#:#Geben Sie durch Komma getrennte IDs von Rollen ein, denen die Berechtigung für das Änderungsprotokoll erteilt werden soll.
+newly_created#:#Neu erstellt
+deletion_mode_delete#:#Gelöscht
+deletion_mode_trash#:#ILIAS Papierkorb
+user_deleted#:#Benutzer %s wurde gelöscht
+user_deleted_info#:#Benutzer wurde gelöscht. Weitere Informationen sind nicht verfügbar, weil sie bereits in der Datenbank gelöscht wurde, bevor ILIAS-Core das deleteUser-Ereignis ausgelöst hat
+user#:#Benutzer
+object#:#ILIAS-Objekt
+user_assigment#:#Benutzerzuordnung (Organisationseinheit)
+user_removed_from_course#:#Der Benutzer wurde als Teilnehmer aus dem Kurs entfernt
+course_participant#:#Kursteilnehmer
+config_configuration#:#Konfiguration
+config_configuration_saved#:#Konfiguration gespeichert
+config_save#:#Speichern
+removeplugindataconfirm_cancel#:#Abbrechen
+removeplugindataconfirm_confirm_remove_data#:#Möchten Sie die %1$s-Daten auch entfernen? Allenfalls möchten Sie das %1$s-Plugin nur deaktivieren?
+removeplugindataconfirm_deactivate#:#%1$s-Plugin nur deaktivieren
+removeplugindataconfirm_data#:#%1$s-Daten
+removeplugindataconfirm_keep_data#:#%1$s-Daten behalten
+removeplugindataconfirm_msg_kept_data#:#Die %1$s-Daten wurden behalten
+removeplugindataconfirm_msg_removed_data#:#Die %1$s-Daten wurden auch entfernt
+removeplugindataconfirm_remove_data#:#Entferne %1$s-Daten
