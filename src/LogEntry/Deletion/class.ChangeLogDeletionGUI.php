@@ -1,17 +1,20 @@
 <?php
 
+namespace srag\Plugins\ChangeLog\LogEntry\Deletion;
+
+// ilCtrlMainMenu Bug
 require_once __DIR__ . "/../../../vendor/autoload.php";
 
 use srag\Plugins\ChangeLog\LogEntry\ChangeLogChangeLogGUI;
-use srag\Plugins\ChangeLog\LogEntry\Deletion\ChangeLogDeletionEntry;
-use srag\Plugins\ChangeLog\LogEntry\Deletion\ChangeLogDeletionTableGUI;
 
 /**
  * Class ChangeLogDeletionGUI
  *
+ * @package           srag\Plugins\ChangeLog\LogEntry\Deletion
+ *
  * @author            Stefan Wanzenried <sw@studer-raimann.ch>
  *
- * @ilCtrl_IsCalledBy ChangeLogDeletionGUI: ilUIPluginRouterGUI
+ * @ilCtrl_IsCalledBy srag\Plugins\ChangeLog\LogEntry\Deletion\ChangeLogDeletionGUI: ilUIPluginRouterGUI
  */
 class ChangeLogDeletionGUI extends ChangeLogChangeLogGUI {
 

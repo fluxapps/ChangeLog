@@ -12,7 +12,7 @@ class ComposerStaticInitb2f821355e4fbb8aa9db8e2fd87dc765
             'srag\\RemovePluginDataConfirm\\ChangeLog\\' => 39,
             'srag\\Plugins\\ChangeLog\\' => 23,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DIC\\' => 9,
+            'srag\\DIC\\ChangeLog\\' => 19,
             'srag\\CustomInputGUIs\\ChangeLog\\' => 31,
             'srag\\ActiveRecordConfig\\ChangeLog\\' => 34,
         ),
@@ -31,7 +31,7 @@ class ComposerStaticInitb2f821355e4fbb8aa9db8e2fd87dc765
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DIC\\' => 
+        'srag\\DIC\\ChangeLog\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
@@ -46,8 +46,6 @@ class ComposerStaticInitb2f821355e4fbb8aa9db8e2fd87dc765
     );
 
     public static $classMap = array (
-        'ChangeLogDeletionGUI' => __DIR__ . '/../..' . '/classes/LogEntry/Deletion/class.ChangeLogDeletionGUI.php',
-        'ChangeLogModificationGUI' => __DIR__ . '/../..' . '/classes/LogEntry/Modification/class.ChangeLogModificationGUI.php',
         'ChangeLogRemoveDataConfirm' => __DIR__ . '/../..' . '/classes/uninstall/class.ChangeLogRemoveDataConfirm.php',
         'ilChangeLogConfigGUI' => __DIR__ . '/../..' . '/classes/class.ilChangeLogConfigGUI.php',
         'ilChangeLogPlugin' => __DIR__ . '/../..' . '/classes/class.ilChangeLogPlugin.php',
@@ -108,9 +106,11 @@ class ComposerStaticInitb2f821355e4fbb8aa9db8e2fd87dc765
         'srag\\Plugins\\ChangeLog\\LogEntry\\ChangeLogLogEntry' => __DIR__ . '/../..' . '/src/LogEntry/ChangeLogLogEntry.php',
         'srag\\Plugins\\ChangeLog\\LogEntry\\Creation\\ChangeLogCreationEntry' => __DIR__ . '/../..' . '/src/LogEntry/Creation/ChangeLogCreationEntry.php',
         'srag\\Plugins\\ChangeLog\\LogEntry\\Deletion\\ChangeLogDeletionEntry' => __DIR__ . '/../..' . '/src/LogEntry/Deletion/ChangeLogDeletionEntry.php',
+        'srag\\Plugins\\ChangeLog\\LogEntry\\Deletion\\ChangeLogDeletionGUI' => __DIR__ . '/../..' . '/src/LogEntry/Deletion/class.ChangeLogDeletionGUI.php',
         'srag\\Plugins\\ChangeLog\\LogEntry\\Deletion\\ChangeLogDeletionTableGUI' => __DIR__ . '/../..' . '/src/LogEntry/Deletion/ChangeLogDeletionTableGUI.php',
         'srag\\Plugins\\ChangeLog\\LogEntry\\Modification\\ChangeLogModification' => __DIR__ . '/../..' . '/src/LogEntry/Modification/ChangeLogModification.php',
         'srag\\Plugins\\ChangeLog\\LogEntry\\Modification\\ChangeLogModificationEntry' => __DIR__ . '/../..' . '/src/LogEntry/Modification/ChangeLogModificationEntry.php',
+        'srag\\Plugins\\ChangeLog\\LogEntry\\Modification\\ChangeLogModificationGUI' => __DIR__ . '/../..' . '/src/LogEntry/Modification/class.ChangeLogModificationGUI.php',
         'srag\\Plugins\\ChangeLog\\LogEntry\\Modification\\ChangeLogModificationTableGUI' => __DIR__ . '/../..' . '/src/LogEntry/Modification/ChangeLogModificationTableGUI.php',
         'srag\\Plugins\\ChangeLog\\Utils\\ChangeLogTrait' => __DIR__ . '/../..' . '/src/Utils/ChangeLogTrait.php',
         'srag\\RemovePluginDataConfirm\\ChangeLog\\AbstractPluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/AbstractPluginUninstallTrait.php',

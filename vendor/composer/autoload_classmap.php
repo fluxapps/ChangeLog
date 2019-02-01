@@ -6,8 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'ChangeLogDeletionGUI' => $baseDir . '/classes/LogEntry/Deletion/class.ChangeLogDeletionGUI.php',
-    'ChangeLogModificationGUI' => $baseDir . '/classes/LogEntry/Modification/class.ChangeLogModificationGUI.php',
     'ChangeLogRemoveDataConfirm' => $baseDir . '/classes/uninstall/class.ChangeLogRemoveDataConfirm.php',
     'ilChangeLogConfigGUI' => $baseDir . '/classes/class.ilChangeLogConfigGUI.php',
     'ilChangeLogPlugin' => $baseDir . '/classes/class.ilChangeLogPlugin.php',
@@ -68,9 +66,11 @@ return array(
     'srag\\Plugins\\ChangeLog\\LogEntry\\ChangeLogLogEntry' => $baseDir . '/src/LogEntry/ChangeLogLogEntry.php',
     'srag\\Plugins\\ChangeLog\\LogEntry\\Creation\\ChangeLogCreationEntry' => $baseDir . '/src/LogEntry/Creation/ChangeLogCreationEntry.php',
     'srag\\Plugins\\ChangeLog\\LogEntry\\Deletion\\ChangeLogDeletionEntry' => $baseDir . '/src/LogEntry/Deletion/ChangeLogDeletionEntry.php',
+    'srag\\Plugins\\ChangeLog\\LogEntry\\Deletion\\ChangeLogDeletionGUI' => $baseDir . '/src/LogEntry/Deletion/class.ChangeLogDeletionGUI.php',
     'srag\\Plugins\\ChangeLog\\LogEntry\\Deletion\\ChangeLogDeletionTableGUI' => $baseDir . '/src/LogEntry/Deletion/ChangeLogDeletionTableGUI.php',
     'srag\\Plugins\\ChangeLog\\LogEntry\\Modification\\ChangeLogModification' => $baseDir . '/src/LogEntry/Modification/ChangeLogModification.php',
     'srag\\Plugins\\ChangeLog\\LogEntry\\Modification\\ChangeLogModificationEntry' => $baseDir . '/src/LogEntry/Modification/ChangeLogModificationEntry.php',
+    'srag\\Plugins\\ChangeLog\\LogEntry\\Modification\\ChangeLogModificationGUI' => $baseDir . '/src/LogEntry/Modification/class.ChangeLogModificationGUI.php',
     'srag\\Plugins\\ChangeLog\\LogEntry\\Modification\\ChangeLogModificationTableGUI' => $baseDir . '/src/LogEntry/Modification/ChangeLogModificationTableGUI.php',
     'srag\\Plugins\\ChangeLog\\Utils\\ChangeLogTrait' => $baseDir . '/src/Utils/ChangeLogTrait.php',
     'srag\\RemovePluginDataConfirm\\ChangeLog\\AbstractPluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/AbstractPluginUninstallTrait.php',

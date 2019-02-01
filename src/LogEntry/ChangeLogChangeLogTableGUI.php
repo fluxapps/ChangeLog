@@ -2,13 +2,13 @@
 
 namespace srag\Plugins\ChangeLog\LogEntry;
 
-use ChangeLogModificationGUI;
 use ilChangeLogPlugin;
 use ilExcel;
 use ilObjUser;
 use ilTable2GUI;
 use srag\DIC\ChangeLog\DICTrait;
 use srag\Plugins\ChangeLog\ChangeLog\ChangeLogChangeLog;
+use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationGUI;
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 
 /**
