@@ -270,8 +270,8 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 			include_once __DIR__ . "/../../../../UIComponent/UserInterfaceHook/CtrlMainMenu/vendor/autoload.php";
 
 			if (class_exists(ctrlmmEntry::class)) {
-				if (count(ctrlmmEntry::getEntriesByCmdClass(ChangeLogModificationGUI::class)) === 0
-					&& count(ctrlmmEntry::getEntriesByCmdClass(ChangeLogDeletionGUI::class)) === 0) {
+				if (count(ctrlmmEntry::getEntriesByCmdClass(str_replace("\\", "\\\\", ChangeLogModificationGUI::class))) === 0
+					&& count(ctrlmmEntry::getEntriesByCmdClass(str_replace("\\", "\\\\", ChangeLogDeletionGUI::class))) === 0) {
 					$dropdown = new ctrlmmEntryDropdown();
 					$dropdown->setTitle(self::PLUGIN_NAME);
 					$dropdown->setTranslations([
@@ -318,7 +318,7 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 			include_once __DIR__ . "/../../../../UIComponent/UserInterfaceHook/CtrlMainMenu/vendor/autoload.php";
 
 			if (class_exists(ctrlmmEntry::class)) {
-				foreach (ctrlmmEntry::getEntriesByCmdClass(ChangeLogModificationGUI::class) as $entry) {
+				foreach (ctrlmmEntry::getEntriesByCmdClass(str_replace("\\", "\\\\", ChangeLogModificationGUI::class)) as $entry) {
 					/**
 					 * @var ctrlmmEntry $entry
 					 */
@@ -331,7 +331,7 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 						}
 					}
 				}
-				foreach (ctrlmmEntry::getEntriesByCmdClass(ChangeLogDeletionGUI::class) as $entry) {
+				foreach (ctrlmmEntry::getEntriesByCmdClass(str_replace("\\", "\\\\", ChangeLogDeletionGUI::class)) as $entry) {
 					/**
 					 * @var ctrlmmEntry $entry
 					 */
