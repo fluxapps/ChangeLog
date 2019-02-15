@@ -2,7 +2,6 @@
 
 namespace srag\Plugins\ChangeLog\LogEntry\Deletion;
 
-use ChangeLogDeletionGUI;
 use ilCombinationInputGUI;
 use ilDateTimeInputGUI;
 use ilLink;

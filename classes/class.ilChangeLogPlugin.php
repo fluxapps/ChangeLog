@@ -9,8 +9,10 @@ use srag\Plugins\ChangeLog\Component\ChangeLogComponentObject;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponentUser;
 use srag\Plugins\ChangeLog\Config\ChangeLogConfig;
 use srag\Plugins\ChangeLog\LogEntry\Deletion\ChangeLogDeletionEntry;
+use srag\Plugins\ChangeLog\LogEntry\Deletion\ChangeLogDeletionGUI;
 use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModification;
 use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationEntry;
+use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationGUI;
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 use srag\Plugins\CtrlMainMenu\Entry\ctrlmmEntry;
 use srag\Plugins\CtrlMainMenu\EntryTypes\Ctrl\ctrlmmEntryCtrl;
@@ -268,8 +270,8 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 			include_once __DIR__ . "/../../../../UIComponent/UserInterfaceHook/CtrlMainMenu/vendor/autoload.php";
 
 			if (class_exists(ctrlmmEntry::class)) {
-				if (count(ctrlmmEntry::getEntriesByCmdClass(ChangeLogModificationGUI::class)) === 0
-					&& count(ctrlmmEntry::getEntriesByCmdClass(ChangeLogDeletionGUI::class)) === 0) {
+				if (count(ctrlmmEntry::getEntriesByCmdClass(str_replace("\\", "\\\\", ChangeLogModificationGUI::class))) === 0
+					&& count(ctrlmmEntry::getEntriesByCmdClass(str_replace("\\", "\\\\", ChangeLogDeletionGUI::class))) === 0) {
 					$dropdown = new ctrlmmEntryDropdown();
 					$dropdown->setTitle(self::PLUGIN_NAME);
 					$dropdown->setTranslations([
@@ -316,7 +318,7 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 			include_once __DIR__ . "/../../../../UIComponent/UserInterfaceHook/CtrlMainMenu/vendor/autoload.php";
 
 			if (class_exists(ctrlmmEntry::class)) {
-				foreach (ctrlmmEntry::getEntriesByCmdClass(ChangeLogModificationGUI::class) as $entry) {
+				foreach (ctrlmmEntry::getEntriesByCmdClass(str_replace("\\", "\\\\", ChangeLogModificationGUI::class)) as $entry) {
 					/**
 					 * @var ctrlmmEntry $entry
 					 */
@@ -329,7 +331,7 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 						}
 					}
 				}
-				foreach (ctrlmmEntry::getEntriesByCmdClass(ChangeLogDeletionGUI::class) as $entry) {
+				foreach (ctrlmmEntry::getEntriesByCmdClass(str_replace("\\", "\\\\", ChangeLogDeletionGUI::class)) as $entry) {
 					/**
 					 * @var ctrlmmEntry $entry
 					 */

@@ -1,16 +1,20 @@
 <?php
 
+namespace srag\Plugins\ChangeLog\LogEntry\Modification;
+
+// ilCtrlMainMenu Bug
 require_once __DIR__ . "/../../../vendor/autoload.php";
 
 use srag\Plugins\ChangeLog\LogEntry\ChangeLogChangeLogGUI;
-use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationTableGUI;
 
 /**
  * Class ChangeLogModificationGUI
  *
+ * @package           srag\Plugins\ChangeLog\LogEntry\Modification
+ *
  * @author            Theodor Truffer <tt@studer-raimann.ch>
  *
- * @ilCtrl_IsCalledBy ChangeLogModificationGUI: ilUIPluginRouterGUI
+ * @ilCtrl_IsCalledBy srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationGUI: ilUIPluginRouterGUI
  */
 class ChangeLogModificationGUI extends ChangeLogChangeLogGUI {
 
