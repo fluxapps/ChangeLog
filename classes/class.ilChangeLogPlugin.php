@@ -2,6 +2,7 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
+use ILIAS\GlobalScreen\Provider\StaticProvider\AbstractStaticPluginMainMenuProvider;
 use srag\Plugins\ChangeLog\ChangeLog\ChangeLogChangeLog;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponent;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponentCourseParticipant;
@@ -13,6 +14,7 @@ use srag\Plugins\ChangeLog\LogEntry\Deletion\ChangeLogDeletionGUI;
 use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModification;
 use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationEntry;
 use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationGUI;
+use srag\Plugins\ChangeLog\Menu\Menu;
 use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
 use srag\Plugins\CtrlMainMenu\Entry\ctrlmmEntry;
 use srag\Plugins\CtrlMainMenu\EntryTypes\Ctrl\ctrlmmEntryCtrl;
@@ -228,24 +230,16 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 	/**
 	 * @return string
 	 */
-	public function getPluginName() {
+	public function getPluginName(): string {
 		return self::PLUGIN_NAME;
 	}
 
 
 	/**
-	 *
+	 * @inheritdoc
 	 */
-	protected function afterActivation() {
-		$this->addCtrlMainMenu();
-	}
-
-
-	/**
-	 *
-	 */
-	protected function afterDeactivation() {
-		$this->removeCtrlMainMenu();
+	public function promoteGlobalScreenProvider(): AbstractStaticPluginMainMenuProvider {
+		return new Menu(self::dic()->dic(), $this);
 	}
 
 
@@ -258,7 +252,29 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 		self::dic()->database()->dropTable(ChangeLogModificationEntry::TABLE_NAME, false);
 		self::dic()->database()->dropTable(ChangeLogConfig::TABLE_NAME, false);
 
-		$this->removeCtrlMainMenu();
+		if (!self::version()->is54()) {
+			$this->removeCtrlMainMenu();
+		}
+	}
+
+
+	/**
+	 *
+	 */
+	protected function afterActivation() {
+		if (!self::version()->is54()) {
+			$this->addCtrlMainMenu();
+		}
+	}
+
+
+	/**
+	 *
+	 */
+	protected function afterDeactivation() {
+		if (!self::version()->is54()) {
+			$this->removeCtrlMainMenu();
+		}
 	}
 
 
