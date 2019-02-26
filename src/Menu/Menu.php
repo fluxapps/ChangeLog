@@ -50,13 +50,13 @@ class Menu extends AbstractStaticPluginMainMenuProvider {
 
 		return [
 			self::dic()->globalScreen()->mainmenu()->link(self::dic()->globalScreen()->identification()->plugin(self::plugin()
-				->getPluginObject(), $this)->identifier(ilChangeLogPlugin::PLUGIN_ID . "_1"))->withParent($parent->getProviderIdentification())
+				->getPluginObject(), $this)->identifier(ilChangeLogPlugin::PLUGIN_ID . "_mod"))->withParent($parent->getProviderIdentification())
 				->withTitle(self::plugin()->translate("modification_log"))->withAction(self::dic()->ctrl()->getLinkTargetByClass([
 					ilUIPluginRouterGUI::class,
 					ChangeLogModificationGUI::class
 				], ChangeLogModificationGUI::CMD_INDEX)),
 			self::dic()->globalScreen()->mainmenu()->link(self::dic()->globalScreen()->identification()->plugin(self::plugin()
-				->getPluginObject(), $this)->identifier(ilChangeLogPlugin::PLUGIN_ID . "_2"))->withParent($parent->getProviderIdentification())
+				->getPluginObject(), $this)->identifier(ilChangeLogPlugin::PLUGIN_ID . "_del"))->withParent($parent->getProviderIdentification())
 				->withTitle(self::plugin()->translate("deletion_log"))->withAction(self::dic()->ctrl()->getLinkTargetByClass([
 					ilUIPluginRouterGUI::class,
 					ChangeLogDeletionGUI::class
