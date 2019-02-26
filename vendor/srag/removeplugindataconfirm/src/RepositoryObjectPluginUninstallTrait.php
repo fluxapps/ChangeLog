@@ -2,6 +2,8 @@
 
 namespace srag\RemovePluginDataConfirm\ChangeLog;
 
+use srag\RemovePluginDataConfirm\ChangeLog\Exception\RemovePluginDataConfirmException;
+
 /**
  * Trait RepositoryObjectPluginUninstallTrait
  *

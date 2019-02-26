@@ -9,6 +9,9 @@ git clone https://github.com/studer-raimann/ChangeLog.git ChangeLog
 ```
 Update, activate and config the plugin in the ILIAS Plugin Administration
 
+### Menu (Only ILIAS 5.3)
+For ILIAS 5.3, you need to install [CtrlMainMenu](https://github.com/studer-raimann/CtrlMainMenu) before you activate the ChangeLog-Plugin
+
 ### ILIAS-Core-Patch
 In order for a user's update to be recognized correctly, it needs a patch in the ILIAS core in `Services/User/classes/class.ilObjUser.php::update`:
 ```php
@@ -37,10 +40,9 @@ Log table:
 ![Log table](./doc/screenshots/log_table.png)
 
 ### Dependencies
-* ILIAS 5.3
+* ILIAS 5.3 or ILIAS 5.4
 * PHP >=7.0
 * [composer](https://getcomposer.org)
-* [CtrlMainMenu](https://github.com/studer-raimann/CtrlMainMenu)
 * [srag/activerecordconfig](https://packagist.org/packages/srag/activerecordconfig)
 * [srag/dic](https://packagist.org/packages/srag/dic)
 * [srag/librariesnamespacechanger](https://packagist.org/packages/srag/librariesnamespacechanger)
