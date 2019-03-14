@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use ILIAS\GlobalScreen\Provider\StaticProvider\AbstractStaticPluginMainMenuProvider;
+use ILIAS\GlobalScreen\Scope\MainMenu\Provider\AbstractStaticPluginMainMenuProvider;
 use srag\Plugins\ChangeLog\ChangeLog\ChangeLogChangeLog;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponent;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponentCourseParticipant;
@@ -50,7 +50,7 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 	 * @return self
 	 */
 	public static function getInstance() {
-		if (static::$instance === NULL) {
+		if (static::$instance === null) {
 			static::$instance = new self();
 		}
 
@@ -342,7 +342,7 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 
 					if (!empty($entry->getParent())) {
 						$entry = ctrlmmEntry::find($entry->getParent());
-						if ($entry !== NULL && $entry->getTitle() === self::PLUGIN_NAME) {
+						if ($entry !== null && $entry->getTitle() === self::PLUGIN_NAME) {
 							$entry->delete();
 						}
 					}
@@ -355,7 +355,7 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 
 					if (!empty($entry->getParent())) {
 						$entry = ctrlmmEntry::find($entry->getParent());
-						if ($entry !== NULL && $entry->getTitle() === self::PLUGIN_NAME) {
+						if ($entry !== null && $entry->getTitle() === self::PLUGIN_NAME) {
 							$entry->delete();
 						}
 					}

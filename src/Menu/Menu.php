@@ -3,7 +3,7 @@
 namespace srag\Plugins\ChangeLog\Menu;
 
 use ilChangeLogPlugin;
-use ILIAS\GlobalScreen\Provider\StaticProvider\AbstractStaticPluginMainMenuProvider;
+use ILIAS\GlobalScreen\Scope\MainMenu\Provider\AbstractStaticPluginMainMenuProvider;
 use ilUIPluginRouterGUI;
 use srag\DIC\ChangeLog\DICTrait;
 use srag\Plugins\ChangeLog\LogEntry\Deletion\ChangeLogDeletionGUI;
