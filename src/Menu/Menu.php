@@ -32,7 +32,7 @@ class Menu extends AbstractStaticPluginMainMenuProvider {
 	public function getStaticTopItems(): array {
 		return [
 			self::dic()->globalScreen()->mainmenu()->topParentItem(self::dic()->globalScreen()->identification()->plugin(self::plugin()
-				->getPluginObject(), $this)->identifier(ilChangeLogPlugin::PLUGIN_ID))->withTitle(ilChangeLogPlugin::PLUGIN_NAME)
+				->getPluginObject(), $this)->identifier(ilChangeLogPlugin::PLUGIN_ID))->withTitle(self::plugin()->translate("changelog"))
 				->withAvailableCallable(function (): bool {
 					return self::plugin()->getPluginObject()->isActive();
 				})->withVisibilityCallable(function (): bool {

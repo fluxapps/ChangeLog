@@ -3,6 +3,7 @@
 require_once __DIR__ . "/../vendor/autoload.php";
 
 use ILIAS\GlobalScreen\Scope\MainMenu\Provider\AbstractStaticPluginMainMenuProvider;
+use srag\DIC\ChangeLog\Util\LibraryLanguageInstaller;
 use srag\Plugins\ChangeLog\ChangeLog\ChangeLogChangeLog;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponent;
 use srag\Plugins\ChangeLog\Component\ChangeLogComponentCourseParticipant;
@@ -246,6 +247,17 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 	/**
 	 * @inheritdoc
 	 */
+	public function updateLanguages($a_lang_keys = null) {
+		parent::updateLanguages($a_lang_keys);
+
+		LibraryLanguageInstaller::getInstance()->withPlugin(self::plugin())->withLibraryLanguageDirectory(__DIR__
+			. "/../vendor/srag/removeplugindataconfirm/lang")->updateLanguages();
+	}
+
+
+	/**
+	 * @inheritdoc
+	 */
 	protected function deleteData()/*: void*/ {
 		self::dic()->database()->dropTable(ChangeLogDeletionEntry::TABLE_NAME, false);
 		self::dic()->database()->dropTable(ChangeLogModification::TABLE_NAME, false);
@@ -291,8 +303,8 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 					$dropdown = new ctrlmmEntryDropdown();
 					$dropdown->setTitle(self::PLUGIN_NAME);
 					$dropdown->setTranslations([
-						"en" => self::PLUGIN_NAME,
-						"de" => self::PLUGIN_NAME
+						"en" => self::plugin()->translate("changelog", "", [], true, "en"),
+						"de" => self::plugin()->translate("changelog", "", [], true, "de")
 					]);
 					$dropdown->setPermissionType(ctrlmmMenu::PERM_ROLE);
 					$dropdown->setPermission(json_encode([ self::ADMIN_ROLE_ID ]));
