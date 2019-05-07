@@ -303,8 +303,8 @@ class ilChangeLogPlugin extends ilEventHookPlugin {
 					$dropdown = new ctrlmmEntryDropdown();
 					$dropdown->setTitle(self::PLUGIN_NAME);
 					$dropdown->setTranslations([
-						"en" => self::PLUGIN_NAME,
-						"de" => self::PLUGIN_NAME
+						"en" => self::plugin()->translate("changelog", "", [], true, "en"),
+						"de" => self::plugin()->translate("changelog", "", [], true, "de")
 					]);
 					$dropdown->setPermissionType(ctrlmmMenu::PERM_ROLE);
 					$dropdown->setPermission(json_encode([ self::ADMIN_ROLE_ID ]));
