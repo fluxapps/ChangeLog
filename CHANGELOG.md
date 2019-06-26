@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.7]
+- Some changes (libraries)
+
 ## [1.0.6]
 - Translate menu title
 
