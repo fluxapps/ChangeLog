@@ -26,7 +26,7 @@ class ChangeLogComponentUser extends ChangeLogComponent {
 		'user_ext_account' => 'getExternalAccount',
 		'active' => 'getActive',
 		'lastname' => 'getLastname',
-		'fristname' => 'getFirstname',
+		'firstname' => 'getFirstname',
 		//		'time_limit_unlimited' => 'getTimeLimitUnlimited',
 		//		'time_limit_from' => 'getTimeLimitFrom',
 		//		'time_limit_until' => 'getTimeLimitUntil',

@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.8]
+- Fix first name typo
+
 ## [1.0.7]
 - Some changes (libraries)
 
