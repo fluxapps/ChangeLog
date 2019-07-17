@@ -30,10 +30,6 @@ class Menu extends AbstractStaticPluginMainMenuProvider {
 	 * @inheritdoc
 	 */
 	public function getStaticTopItems(): array {
-		if (!self::plugin()->getPluginObject()->isActive()) {
-			return [];
-		}
-
 		return [
 			self::dic()->globalScreen()->mainmenu()->topParentItem(self::dic()->globalScreen()->identification()->plugin(self::plugin()
 				->getPluginObject(), $this)->identifier(ilChangeLogPlugin::PLUGIN_ID))->withTitle(self::plugin()->translate("changelog"))
@@ -50,10 +46,6 @@ class Menu extends AbstractStaticPluginMainMenuProvider {
 	 * @inheritdoc
 	 */
 	public function getStaticSubItems(): array {
-		if (!self::plugin()->getPluginObject()->isActive()) {
-			return [];
-		}
-
 		$parent = $this->getStaticTopItems()[0];
 
 		return [
