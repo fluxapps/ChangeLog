@@ -19,48 +19,48 @@ use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
  *
  * @since   ILIAS 5.4
  */
-class Menu extends AbstractStaticPluginMainMenuProvider {
+class Menu extends AbstractStaticPluginMainMenuProvider
+{
 
-	use DICTrait;
-	use ChangeLogTrait;
-	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
-
-
-	/**
-	 * @inheritdoc
-	 */
-	public function getStaticTopItems(): array {
-		return [
-			self::dic()->globalScreen()->mainmenu()->topParentItem(self::dic()->globalScreen()->identification()->plugin(self::plugin()
-				->getPluginObject(), $this)->identifier(ilChangeLogPlugin::PLUGIN_ID))->withTitle(self::plugin()->translate("changelog"))
-				->withAvailableCallable(function (): bool {
-					return self::plugin()->getPluginObject()->isActive();
-				})->withVisibilityCallable(function (): bool {
-					return in_array(ilChangeLogPlugin::ADMIN_ROLE_ID, self::dic()->rbacreview()->assignedRoles(self::dic()->user()->getId()));
-				})
-		];
-	}
+    use DICTrait;
+    use ChangeLogTrait;
+    const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
 
 
-	/**
-	 * @inheritdoc
-	 */
-	public function getStaticSubItems(): array {
-		$parent = $this->getStaticTopItems()[0];
+    /**
+     * @inheritdoc
+     */
+    public function getStaticTopItems() : array
+    {
+        return [
+            $this->mainmenu->topParentItem($this->if->identifier(ilChangeLogPlugin::PLUGIN_ID))->withTitle(self::plugin()->translate("changelog"))
+                ->withAvailableCallable(function () : bool {
+                    return self::plugin()->getPluginObject()->isActive();
+                })->withVisibilityCallable(function () : bool {
+                    return in_array(ilChangeLogPlugin::ADMIN_ROLE_ID, self::dic()->rbacreview()->assignedRoles(self::dic()->user()->getId()));
+                })
+        ];
+    }
 
-		return [
-			self::dic()->globalScreen()->mainmenu()->link(self::dic()->globalScreen()->identification()->plugin(self::plugin()
-				->getPluginObject(), $this)->identifier(ilChangeLogPlugin::PLUGIN_ID . "_mod"))->withParent($parent->getProviderIdentification())
-				->withTitle(self::plugin()->translate("modification_log"))->withAction(self::dic()->ctrl()->getLinkTargetByClass([
-					ilUIPluginRouterGUI::class,
-					ChangeLogModificationGUI::class
-				], ChangeLogModificationGUI::CMD_INDEX)),
-			self::dic()->globalScreen()->mainmenu()->link(self::dic()->globalScreen()->identification()->plugin(self::plugin()
-				->getPluginObject(), $this)->identifier(ilChangeLogPlugin::PLUGIN_ID . "_del"))->withParent($parent->getProviderIdentification())
-				->withTitle(self::plugin()->translate("deletion_log"))->withAction(self::dic()->ctrl()->getLinkTargetByClass([
-					ilUIPluginRouterGUI::class,
-					ChangeLogDeletionGUI::class
-				], ChangeLogDeletionGUI::CMD_INDEX))
-		];
-	}
+
+    /**
+     * @inheritdoc
+     */
+    public function getStaticSubItems() : array
+    {
+        $parent = $this->getStaticTopItems()[0];
+
+        return [
+            $this->mainmenu->link($this->if->identifier(ilChangeLogPlugin::PLUGIN_ID . "_mod"))->withParent($parent->getProviderIdentification())
+                ->withTitle(self::plugin()->translate("modification_log"))->withAction(self::dic()->ctrl()->getLinkTargetByClass([
+                    ilUIPluginRouterGUI::class,
+                    ChangeLogModificationGUI::class
+                ], ChangeLogModificationGUI::CMD_INDEX)),
+            $this->mainmenu->link($this->if->identifier(ilChangeLogPlugin::PLUGIN_ID . "_del"))->withParent($parent->getProviderIdentification())
+                ->withTitle(self::plugin()->translate("deletion_log"))->withAction(self::dic()->ctrl()->getLinkTargetByClass([
+                    ilUIPluginRouterGUI::class,
+                    ChangeLogDeletionGUI::class
+                ], ChangeLogDeletionGUI::CMD_INDEX))
+        ];
+    }
 }
