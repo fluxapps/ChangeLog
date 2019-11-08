@@ -16,15 +16,18 @@ use srag\Plugins\ChangeLog\LogEntry\ChangeLogChangeLogGUI;
  *
  * @ilCtrl_IsCalledBy srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationGUI: ilUIPluginRouterGUI
  */
-class ChangeLogModificationGUI extends ChangeLogChangeLogGUI {
+class ChangeLogModificationGUI extends ChangeLogChangeLogGUI
+{
 
-	function getTableGUI($cmd) {
-		return new ChangeLogModificationTableGUI($this, $cmd);
-	}
+    function getTableGUI($cmd)
+    {
+        return new ChangeLogModificationTableGUI($this, $cmd);
+    }
 
 
-	protected function index() {
-		self::dic()->mainTemplate()->setTitle(self::plugin()->translate('modification_log'));
-		parent::index();
-	}
+    protected function index()
+    {
+        self::dic()->mainTemplate()->setTitle(self::plugin()->translate('modification_log'));
+        parent::index();
+    }
 }

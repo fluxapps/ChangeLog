@@ -13,33 +13,36 @@ use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-final class Access {
+final class Access
+{
 
-	use DICTrait;
-	use ChangeLogTrait;
-	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
-	/**
-	 * @var self
-	 */
-	protected static $instance = NULL;
-
-
-	/**
-	 * @return self
-	 */
-	public static function getInstance()/*: self*/ {
-		if (self::$instance === NULL) {
-			self::$instance = new self();
-		}
-
-		return self::$instance;
-	}
+    use DICTrait;
+    use ChangeLogTrait;
+    const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
+    /**
+     * @var self
+     */
+    protected static $instance = null;
 
 
-	/**
-	 * Access constructor
-	 */
-	private function __construct() {
+    /**
+     * @return self
+     */
+    public static function getInstance()/*: self*/
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
 
-	}
+        return self::$instance;
+    }
+
+
+    /**
+     * Access constructor
+     */
+    private function __construct()
+    {
+
+    }
 }
