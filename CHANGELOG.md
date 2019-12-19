@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.0]
+- Some improvments
+
 ## [1.0.8]
 - Fix first name typo
 

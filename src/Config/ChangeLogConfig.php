@@ -14,16 +14,18 @@ use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class ChangeLogConfig extends ActiveRecordConfig {
+class ChangeLogConfig extends ActiveRecordConfig
+{
 
-	use ChangeLogTrait;
-	const TABLE_NAME = "chlog_config";
-	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
-	const KEY_ROLES = "conf_roles";
-	/**
-	 * @var array
-	 */
-	protected static $fields = [
-		ChangeLogConfig::KEY_ROLES => self::TYPE_STRING
-	];
+    use ChangeLogTrait;
+    const TABLE_NAME = "chlog_config";
+    const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
+    const KEY_ROLES = "conf_roles";
+    /**
+     * @var array
+     */
+    protected static $fields
+        = [
+            ChangeLogConfig::KEY_ROLES => self::TYPE_STRING
+        ];
 }

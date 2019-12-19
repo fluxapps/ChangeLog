@@ -12,8 +12,9 @@ use srag\RemovePluginDataConfirm\ChangeLog\AbstractRemovePluginDataConfirm;
  *
  * @ilCtrl_isCalledBy ChangeLogRemoveDataConfirm: ilUIPluginRouterGUI
  */
-class ChangeLogRemoveDataConfirm extends AbstractRemovePluginDataConfirm {
+class ChangeLogRemoveDataConfirm extends AbstractRemovePluginDataConfirm
+{
 
-	use ChangeLogTrait;
-	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
+    use ChangeLogTrait;
+    const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
 }

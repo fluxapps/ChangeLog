@@ -1,3 +1,5 @@
+This is an OpenSource project by studer + raimann ag, CH-Burgdorf (https://studer-raimann.ch)
+
 ## Installation
 
 ### Install ChangeLog-Plugin
@@ -10,7 +12,7 @@ git clone https://github.com/studer-raimann/ChangeLog.git ChangeLog
 Update, activate and config the plugin in the ILIAS Plugin Administration
 
 ### Menu (Only ILIAS 5.3)
-For ILIAS 5.3, you need to install [CtrlMainMenu](https://github.com/studer-raimann/CtrlMainMenu) before you activate the ChangeLog-Plugin
+For ILIAS 5.3, you need to use [CtrlMainMenu](https://github.com/studer-raimann/CtrlMainMenu)
 
 ### ILIAS-Core-Patch
 In order for a user's update to be recognized correctly, it needs a patch in the ILIAS core in `Services/User/classes/class.ilObjUser.php::update`:
@@ -44,10 +46,11 @@ Log table:
 * PHP >=7.0
 
 ### Adjustment suggestions
-* Adjustment suggestions by pull requests
-* Adjustment suggestions which are not yet worked out in detail by Jira tasks under https://jira.studer-raimann.ch/projects/PLCH
-* Bug reports under https://jira.studer-raimann.ch/projects/PLCH
-* For external users you can report it at https://plugins.studer-raimann.ch/goto.php?target=uihk_srsu_PLCH
+* External users can report suggestions and bugs at https://plugins.studer-raimann.ch/goto.php?target=uihk_srsu_PLCH
+* Adjustment suggestions by pull requests via github
+* Customer of studer + raimann ag: 
+	* Adjustment suggestions which are not yet worked out in detail by Jira tasks under https://jira.studer-raimann.ch/projects/PLCH
+	* Bug reports under https://jira.studer-raimann.ch/projects/PLCH
 
 ### Plugin SLA
 Wir lieben und leben die Philosophie von Open Source Software! Die meisten unserer Entwicklungen, welche wir im Kundenauftrag oder in Eigenleistung entwickeln, stellen wir öffentlich allen Interessierten kostenlos unter https://github.com/studer-raimann zur Verfügung.

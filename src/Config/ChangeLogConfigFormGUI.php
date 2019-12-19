@@ -14,21 +14,23 @@ use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class ChangeLogConfigFormGUI extends ActiveRecordConfigFormGUI {
+class ChangeLogConfigFormGUI extends ActiveRecordConfigFormGUI
+{
 
-	use ChangeLogTrait;
-	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
-	const CONFIG_CLASS_NAME = ChangeLogConfig::class;
+    use ChangeLogTrait;
+    const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
+    const CONFIG_CLASS_NAME = ChangeLogConfig::class;
 
 
-	/**
-	 * @inheritdoc
-	 */
-	protected function initFields()/*: void*/ {
-		$this->fields = [
-			ChangeLogConfig::KEY_ROLES => [
-				self::PROPERTY_CLASS => ilTextInputGUI::class
-			]
-		];
-	}
+    /**
+     * @inheritdoc
+     */
+    protected function initFields()/*: void*/
+    {
+        $this->fields = [
+            ChangeLogConfig::KEY_ROLES => [
+                self::PROPERTY_CLASS => ilTextInputGUI::class
+            ]
+        ];
+    }
 }

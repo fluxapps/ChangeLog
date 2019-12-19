@@ -12,12 +12,13 @@ use srag\Plugins\ChangeLog\Utils\ChangeLogTrait;
  *
  * @author studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class ilChangeLogConfigGUI extends ActiveRecordConfigGUI {
+class ilChangeLogConfigGUI extends ActiveRecordConfigGUI
+{
 
-	use ChangeLogTrait;
-	const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
-	/**
-	 * @var array
-	 */
-	protected static $tabs = [ self::TAB_CONFIGURATION => ChangeLogConfigFormGUI::class ];
+    use ChangeLogTrait;
+    const PLUGIN_CLASS_NAME = ilChangeLogPlugin::class;
+    /**
+     * @var array
+     */
+    protected static $tabs = [self::TAB_CONFIGURATION => ChangeLogConfigFormGUI::class];
 }
