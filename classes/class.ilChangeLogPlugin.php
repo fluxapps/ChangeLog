@@ -269,25 +269,5 @@ class ilChangeLogPlugin extends ilEventHookPlugin
         self::dic()->database()->dropTable(ChangeLogModification::TABLE_NAME, false);
         self::dic()->database()->dropTable(ChangeLogModificationEntry::TABLE_NAME, false);
         self::dic()->database()->dropTable(ChangeLogConfig::TABLE_NAME, false);
-
-        Menu::removeCtrlMainMenu();
-    }
-
-
-    /**
-     *
-     */
-    protected function afterActivation()
-    {
-        Menu::addCtrlMainMenu();
-    }
-
-
-    /**
-     *
-     */
-    protected function afterDeactivation()
-    {
-        Menu::removeCtrlMainMenu();
     }
 }
