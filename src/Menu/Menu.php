@@ -5,6 +5,7 @@ namespace srag\Plugins\ChangeLog\Menu;
 use ilChangeLogPlugin;
 use ILIAS\GlobalScreen\Scope\MainMenu\Provider\AbstractStaticPluginMainMenuProvider;
 use ilUIPluginRouterGUI;
+use ilUtil;
 use srag\DIC\ChangeLog\DICTrait;
 use srag\Plugins\ChangeLog\LogEntry\Deletion\ChangeLogDeletionGUI;
 use srag\Plugins\ChangeLog\LogEntry\Modification\ChangeLogModificationGUI;
@@ -38,7 +39,7 @@ class Menu extends AbstractStaticPluginMainMenuProvider
                     return self::plugin()->getPluginObject()->isActive();
                 })->withVisibilityCallable(function () : bool {
                     return in_array(ilChangeLogPlugin::ADMIN_ROLE_ID, self::dic()->rbacreview()->assignedRoles(self::dic()->user()->getId()));
-                })
+                })->withSymbol(self::dic()->ui()->factory()->symbol()->icon()->custom(ilUtil::getImagePath("outlined/icon_lstv.svg"), ilChangeLogPlugin::PLUGIN_NAME))
         ];
     }
 
@@ -52,15 +53,15 @@ class Menu extends AbstractStaticPluginMainMenuProvider
 
         return [
             $this->mainmenu->link($this->if->identifier(ilChangeLogPlugin::PLUGIN_ID . "_mod"))->withParent($parent->getProviderIdentification())
-                ->withTitle(self::plugin()->translate("modification_log"))->withAction(self::dic()->ctrl()->getLinkTargetByClass([
+                ->withTitle(self::plugin()->translate("modification_log"))->withAction(str_replace("\\", "%5C", self::dic()->ctrl()->getLinkTargetByClass([
                     ilUIPluginRouterGUI::class,
                     ChangeLogModificationGUI::class
-                ], ChangeLogModificationGUI::CMD_INDEX)),
+                ], ChangeLogModificationGUI::CMD_INDEX)))->withSymbol(self::dic()->ui()->factory()->symbol()->icon()->custom(ilUtil::getImagePath("outlined/icon_lstv.svg"), ilChangeLogPlugin::PLUGIN_NAME)),
             $this->mainmenu->link($this->if->identifier(ilChangeLogPlugin::PLUGIN_ID . "_del"))->withParent($parent->getProviderIdentification())
-                ->withTitle(self::plugin()->translate("deletion_log"))->withAction(self::dic()->ctrl()->getLinkTargetByClass([
+                ->withTitle(self::plugin()->translate("deletion_log"))->withAction(str_replace("\\", "%5C", self::dic()->ctrl()->getLinkTargetByClass([
                     ilUIPluginRouterGUI::class,
                     ChangeLogDeletionGUI::class
-                ], ChangeLogDeletionGUI::CMD_INDEX))
+                ], ChangeLogDeletionGUI::CMD_INDEX)))->withSymbol(self::dic()->ui()->factory()->symbol()->icon()->custom(ilUtil::getImagePath("outlined/icon_lstv.svg"), ilChangeLogPlugin::PLUGIN_NAME))
         ];
     }
 }

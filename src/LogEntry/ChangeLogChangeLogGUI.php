@@ -31,7 +31,7 @@ abstract class ChangeLogChangeLogGUI
 
     public function __construct()
     {
-        self::dic()->mainTemplate()->getStandardTemplate();
+        self::dic()->mainTemplate()->loadStandardTemplate();
         self::dic()->mainTemplate()->addCss(self::plugin()->directory() . '/templates/css/ChangeLog.css');
         self::dic()->mainTemplate()->addJavaScript(self::plugin()->directory() . '/templates/js/ChangeLog.js');
     }
@@ -39,7 +39,7 @@ abstract class ChangeLogChangeLogGUI
 
     public function executeCommand()
     {
-        self::dic()->mainTemplate()->getStandardTemplate();
+        self::dic()->mainTemplate()->loadStandardTemplate();
 
         $cmd = self::dic()->ctrl()->getCmd(self::CMD_INDEX);
         $this->checkPermission();
@@ -52,7 +52,7 @@ abstract class ChangeLogChangeLogGUI
                 break;
         }
 
-        self::dic()->mainTemplate()->show();
+        self::dic()->mainTemplate()->printToStdout();
     }
 
 

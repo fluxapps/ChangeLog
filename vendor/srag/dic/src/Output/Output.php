@@ -95,13 +95,13 @@ final class Output implements OutputInterface {
 			exit;
 		} else {
 			if ($main_template) {
-				self::dic()->mainTemplate()->getStandardTemplate();
+				self::dic()->mainTemplate()->loadStandardTemplate();
 			}
 
 			self::dic()->mainTemplate()->setContent($html);
 
 			if ($show) {
-				self::dic()->mainTemplate()->show();
+				self::dic()->mainTemplate()->printToStdout();
 			}
 		}
 	}
