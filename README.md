@@ -44,3 +44,12 @@ Log table:
 ### Requirements
 * ILIAS 5.3 or ILIAS 5.4
 * PHP >=7.0
+
+## Rebuild & Maintenance
+
+fluxlabs ag, support@fluxlabs.ch
+
+This project needs to be rebuilt before it can be maintained.
+
+Are you interested in a rebuild and would you like to participate?
+Take advantage of the crowdfunding opportunity under [discussions](https://github.com/fluxapps/ChangeLog/discussions/3).
